@@ -28,5 +28,8 @@
         * [SVN](Section2/VersionControl/svn.md)
     * [持续集成相关](Section2/CongratulationIntegration/README.md)
         * [Jenkins](Section2/CongratulationIntegration/Jenkins/README.md)
+            * [Python 使用Jenkins Rest API 之 python-jenkins](Section2/CongratulationIntegration/Jenkins/python-jenkins.md)
+            * [Python 使用Jenkins Rest API 之 jenkinsapi](Section2/CongratulationIntegration/Jenkins/jenkinsapi.md)
     * [附录A 机器异常](Section2/AppendixA/README.md)
+* [附录 计算机概念](AppendixConception/compuword.md)
 
