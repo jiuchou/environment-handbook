@@ -283,6 +283,18 @@ java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -remoting -s http://loca
 	官方使用指南: https://wiki.jenkins.io/display/JENKINS/Global+Post+Script+Plugin
 ```
 
+2.SLOCCount Plugin
+
+```
+官网地址: https://plugins.jenkins.io/sloccount
+功能: This plug-in generates trend report for SLOCCount and cloc open source tools, that count number of code lines written in many programming languages.
+说明: 
+	官方使用指南: https://wiki.jenkins.io/display/JENKINS/SLOCCount+Plugin
+扩展:
+	cloc: http://cloc.sourceforge.net/
+	sloccount: https://dwheeler.com/sloccount/
+```
+
 #### 3.2.7 Docker插件
 
 1.docker-slaves
