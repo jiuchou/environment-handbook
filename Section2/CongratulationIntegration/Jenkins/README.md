@@ -76,6 +76,10 @@ java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -remoting -s http://loca
 
 ## 3 Jenkins Plugin
 
+> 扩展
+> https://blog.csdn.net/pansaky/article/details/80755739
+> https://blog.csdn.net/chinabluexfw/article/details/7484311
+
 ### 3.1 插件安装
 
 插件安装有两种安装方式：
