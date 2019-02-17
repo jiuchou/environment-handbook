@@ -340,19 +340,84 @@ coverity插件
 
 ## 4 API调用
 
+* 参考：
+  * [Python-Jenkins API使用 —— 在后端代码中操控Jenkins](https://www.cnblogs.com/znicy/p/5498609.html)
+
 ### 4.1 使用 Linux curl 调用API
 
-详细内容查看官网介绍: [Remote access API](https://wiki.jenkins.io/display/JENKINS/Remote+access+API)
+> 详细内容查看官网介绍: [Remote access API](https://wiki.jenkins.io/display/JENKINS/Remote+access+API)
 
-### 4.2 Python使用Jenkins Rest API  
+该方式是通过命令行直接调curl去发POST请求的方式来触发job的构建。
 
-#### 4.2.1 Python 使用Jenkins Rest API 之 python-jenkins 
+对于用openid管理的Jenkins，需要带上参数--user USERNAME:PASSWORD，其中的USERNAME和PASSWORD不是你的openID登录的账号密码，而是登录后显示在Jenkins中的User Id和API Token。
 
-#### 4.2.2 Python 使用Jenkins Rest API 之 jenkinsapi
+API Token的查看方式为
+
+**Jenkins1.x**
+
+使用openID登录jenkins -> 点击右上角用户名，进入用户个人页面 -> 点击左边的设置，打开设置页面 -> API Token，Show Api Token... 
+
+**Jenkins2.x**
+
+使用openID登录jenkins -> 点击右上角用户名，进入用户个人页面 -> 点击左边的设置，打开设置页面 -> API Token（创建时显示后保存，之后无法查看，如果忘记需要重新设置）
+
+
+
+注意点：
+
+1.CSRF Protection
+
+> 如果CSRF开启，需使用crumb，否则会出现报错：`Error 403 No valid crumb was included in the request`
+
+官网说明
+
+If your Jenkins uses the "Prevent Cross Site Request Forgery exploits" security option (which it should), when you make a `POST` request, you have to send a CSRF protection token as an HTTP request header.
+For curl/wget you can obtain the header needed in the request from the URL `JENKINS_URL/crumbIssuer/api/xml` (or `.../api/json`). Something like this:
+
+```
+wget -q --auth-no-challenge --user USERNAME --password PASSWORD --output-document - \
+'JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
+```
+
+This will print something like ".crumb:1234abcd", which you should add to the subsequent request.
+
+解决方案实例：
+
+* 参考：
+  * https://stackoverflow.com/questions/23497819/trigger-parameterized-build-with-curl-and-crumb
+  * https://stackoverflow.com/questions/38137760/jenkins-rest-api-create-job
+
+方案1（未验证）：
+
+**obtain crumb** $ `wget -q --auth-no-challenge --user USERNAME --password PASSWORD --output-document - 'http://myJenkins:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'`
+
+**Now Run Jenkins Job** $ `curl -I -X POST http://USERNAME:PASSWORD@localhost:8080/job/JOBName/build -H "Jenkins-Crumb:44e7038af70da95a47403c3bed5q10f8"`
+
+方案2（未验证）：
+
+```bash
+JENKINS_URL=http://localhost:8080
+CRUMB=$(curl --user $USERNAME:$APITOKEN \
+        $JENKINS_URL/crumbIssuer/api/xml?xpath=concat\(//crumbRequestField,%22:%22,//crumb\))
+curl --user $USERNAME:$APITOKEN -H "$CRUMB" -d "script=$GROOVYSCRIPT" $JENKINS_URL/script
+```
+
+方案3（未验证）：
+
+```bash
+CRUMB=$(curl -s 'http://USER:TOKEN@localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
+curl -X POST -H "$CRUMB" "http://USERNAME:APITOKEN@localhost:8080/createItem?name=NewJob"
+```
+
+### 4.2 Python使用Jenkins REST API  
+
+1.Python 使用Jenkins Rest API 之 [python-jenkins](python-jenkins.md)
+2.Python 使用Jenkins Rest API 之 [jenkinsapi](jenkinsapi.md)
 
 ## 5 更新记录
 
 ```
-2019.02.23: 完成初稿，包含Jenkins服务器安装概述、主流插件概述、Jenkins API等内容。
+2019.02.13: 完成初稿，包含Jenkins服务器安装概述、主流插件概述、Jenkins API等内容。
+2019.02.17: 完善API接口调用内容
 ```
 

@@ -1,11 +1,10 @@
 # Python 使用Jenkins Rest API 之 python-jenkins
 
-* 参考
-
-  * [Python-Jenkins API使用 —— 在后端代码中操控Jenkins](https://www.cnblogs.com/znicy/p/5498609.html)
 * 说明
   * [Python-Jenkins 官网](https://pypi.python.org/pypi/python-jenkins/)
-  * [Python-Jenkins 官方文档](https://pypi.python.org/pypi/python-jenkins/)
+  * [Python-Jenkins 官方文档](https://python-jenkins.readthedocs.io/en/latest/api.html)
+
+## 1 基础说明
 
 ### 1.1 安装
 
@@ -41,54 +40,54 @@ server.get_build_info(job_name,build_number)['result']　　
 
 #判断job名为job_name的job的某次构建是否还在构建中
 server.get_build_info(job_name,build_number)['building']
-
 ```
 
+## 2 错误说明
 
+### 2.1 Possibly authentication failed [403]: Forbidden
 
-待整理
+版本信息
 
-https://stackoverflow.com/questions/23497819/trigger-parameterized-build-with-curl-and-crumb
+```
+Jenkins: 2.150.1
+python-jenkins: 1.4.0
+说明：通过测试，python-jenkins==1.4.0同时兼容Jenkins1.6xx版本
+```
 
-https://stackoverflow.com/questions/38137760/jenkins-rest-api-create-job
+错误信息：
 
-https://blog.csdn.net/tiandaochouqin99/article/details/79893107
+```python
+>>> server.get_whoami()
+xxxxxxxxxx jenkins.JenkinsException: Error in request. Possibly authentication failed [403]: Forbidden
+```
 
-https://stackoverflow.com/questions/12322668/jenkins-python-api-authentication-403-forbidden
+定位过程：
 
-https://python-jenkins.readthedocs.io/en/latest/examples.html
+```
+可能原因：
+1.用户鉴权失败
+用户名和api-token确认无误，权限设置正常
+2.CSRF（防止跨站点请求伪造）机制开启
+Jenkins2.x版本默认开启CSRF机制。通过安全设置页，关闭CSRF机制，使用，接口调用依然失败。非CSRF机制设置问题。
+> 扩展：https://wiki.jenkins.io/display/JENKINS/CSRF+Protection
+3.代理
+通过curl命令调用API接口失败，关闭机器代理，测试通过。
+```
 
-https://pypi.org/project/kerberos/#history
+原因及解决方案：
 
-https://stackoverflow.com/questions/16738441/how-to-request-for-the-crumb-issuer-for-jenkins
+```python
+机器设置了代理，执行调用api接口时，请求经由代理转发出现错误。
+Jenkins2.x版本默认开启CSRF机制，python-jenkins==1.4.0版本能够自动
+关闭代理，问题解决。
+```
+
+### 2.2 调用get_version()提示Error communicating with server
 
 https://www.jianshu.com/p/68dd714e6c31
 
-https://blog.csdn.net/tiandaochouqin99/article/details/79893107
+## 3 扩展
 
-https://www.cnblogs.com/znicy/p/5498609.html
+### 3.1 kerberos
 
-
-jenkins-api
-https://github.com/pycontribs/jenkinsapi
-https://jenkinsapi.readthedocs.io/en/latest/using_jenkinsapi.html#example-1-get-version-of-jenkins
-https://stackoverflow.com/questions/30896343/how-to-install-gssapi-python-module
-
-
-
-## 错误说明
-
-### Possibly authentication failed [403]: Forbidden
-
-命令:
-
-```python
-server.get_whoami()
-```
-
-详细信息:
-
-```python
-jenkins.JenkinsException: Error in request. Possibly authentication failed [403]: Forbidden
-```
-
+https://pypi.org/project/kerberos/#description
