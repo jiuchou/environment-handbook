@@ -18,6 +18,7 @@
     * [2.Docker](Section1/Docker/README.md)
         * [2.1.Docker安装](Section1/Docker/install-docker.md)
 * [Section Two: Tools](Section2/README.md)
+    * [编译相关](Section2/Build/README.md)
     * [Shell](Section2/Shell/README.md)
         * [sed](Section2/Shell/sed/README.md)
         * [set](Section2/Shell/set/README.md)
@@ -30,6 +31,7 @@
         * [Jenkins](Section2/CongratulationIntegration/Jenkins/README.md)
             * [Python 使用Jenkins Rest API 之 python-jenkins](Section2/CongratulationIntegration/Jenkins/python-jenkins.md)
             * [Python 使用Jenkins Rest API 之 jenkinsapi](Section2/CongratulationIntegration/Jenkins/jenkinsapi.md)
+            * [Jenkins 获取字符串变量](Section2/CongratulationIntegration/Jenkins/jenkins-variable.md)
     * [附录A 机器异常](Section2/AppendixA/README.md)
 * [附录 计算机概念](AppendixConception/compuword.md)
 
