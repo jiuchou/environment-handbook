@@ -1,5 +1,8 @@
 # Jenkins 获取字符串变量
 
+* 官方文档:
+  * [Parameterized System Groovy script](https://wiki.jenkins.io/display/JENKINS/Parameterized+System+Groovy+script)
+
 > 场景说明：
 >
 > Jenkins工程中配置的**构建前参数**在使用时含有特殊字符（如"$"），使用Execute Shell插件获取时会进行转义，导致结果不符合预期。

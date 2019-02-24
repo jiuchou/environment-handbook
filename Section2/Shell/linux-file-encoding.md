@@ -1,5 +1,8 @@
 # Linux 文件编码
 
+* 扩展
+  * [GBK 编码](https://www.qqxiuzi.cn/zh/hanzi-gbk-bianma.php)
+
 **查看文件编码**
 
 1. 命令行使用 `file -i filename` 查看文件编码
@@ -25,7 +28,6 @@
 2. 转换为 `GBK` 格式后使用 `vim` 正常打开查看
 
    `iconv -f GBK oldFilename -o newFilename`
-
 
 ## 更新说明
 

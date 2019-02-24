@@ -129,7 +129,17 @@ echo ${var:0-7}
 
 ## 3 其他字符串操作
 
-### 3.1 获取字符串指定位置的内容
+### 3.1 中英文字符转换
+
+* [awk 全角转半角问题](https://segmentfault.com/q/1010000000492605)
+
+把字符串中出现的全角转换为半角
+
+```bash
+sed 'y/。，？；：‘“、（）｀～！＠＃％＊ABCDEFGHIJKLMNOPQRSTUVWXYZ/.,?;:\"\",()`~!@#%*abcdefghijklmnopqrstuvwxyz/'
+```
+
+### 3.2 获取字符串指定位置的内容
 
 **1 使用变量方式**
 

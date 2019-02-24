@@ -2,6 +2,8 @@
 
 http://www.groovy-lang.org/documentation.html
 
+https://wiki.jenkins.io/display/JENKINS/Groovy+plugin
+
 
 ## 使用
 
