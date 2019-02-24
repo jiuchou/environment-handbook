@@ -26,7 +26,6 @@
         * [sed](Section2/Shell/sed/README.md)
         * [set](Section2/Shell/set/README.md)
             * [set -o errexit, set -o pipefail与set -o nounset](Section2/Shell/set/shell-set-fail-exit.md)
-        * [Linux 环境变量](Section2/Shell/linux-environment-variable.md)
         * [Linux 文件编码](Section2/Shell/linux-file-encoding.md)
     * [数据库](Section2/Database/README.md)
         * [MySQL](Section2/Database/MySQL.md)
