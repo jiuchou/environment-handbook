@@ -161,7 +161,25 @@ Build Environment -> Delete workspace before build starts
 
 Post-build Actions -> Delete workspace when build is done
 
-#### 2.1.5 清理工作空间
+#### 2.1.5 使用 Linux curl 调用 Rest API 清理
+
+```bash
+curl -u "username:password" JENKINS_URL/job/JOB_NAME/doWripOutWorkspace
+```
+
+#### 2.1.6 使用 Groovy 脚本清理
+
+* 参考
+  * Wipe out workspaces of all jobs
+    https://wiki.jenkins.io/display/JENKINS/Wipe+out+workspaces+of+all+jobs
+  * Wipe workspaces for a set of jobs on all nodes
+    https://wiki.jenkins.io/display/JENKINS/Wipe+workspaces+for+a+set+of+jobs+on+all+nodes
+
+* 扩展
+  * https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console#JenkinsScriptConsole-ExampleGroovyscripts
+
+* Jenkins视屏
+  * https://edu.csdn.net/course/play/8981/186399(待整理)
 
 配置工程（工程名为 `doWripOutWorkspace`，参数为`projectName`），清理Jenkins中制定工程的工作空间
 
@@ -195,7 +213,7 @@ for(item in Hudson.instance.items) {
 }
 ```
 
-#### 2.1.6 清理工程已经删除的工作空间 
+#### 2.1.7 清理工程已经删除的工作空间 
 
 直接删除Jenkins Job，并没有先**清理工作空间**，这样会导致有些被删除的Jenkins Job原来的工作空间一直存在，导致无用数据占用磁盘，需要清理。
 
