@@ -1,0 +1,913 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python 使用Jenkins Rest API 之 python-jenkins · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="jenkinsapi.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../Section1/">
+            
+                <a href="../../../Section1/">
+            
+                    
+                    Section One: Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../Section1/Editor/">
+            
+                <a href="../../../Section1/Editor/">
+            
+                    
+                    0.编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../Section1/Editor/linux-vim-editor.html">
+            
+                <a href="../../../Section1/Editor/linux-vim-editor.html">
+            
+                    
+                    0.1.Linux配置Vim编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../Section1/Editor/VSCode.html">
+            
+                <a href="../../../Section1/Editor/VSCode.html">
+            
+                    
+                    0.2.Visual Studio Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../Section1/Environment/">
+            
+                <a href="../../../Section1/Environment/">
+            
+                    
+                    1.环境管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../Section1/Environment/Machine/">
+            
+                <a href="../../../Section1/Environment/Machine/">
+            
+                    
+                    1.1.机器相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../../Section1/Environment/Machine/env-variable.html">
+            
+                <a href="../../../Section1/Environment/Machine/env-variable.html">
+            
+                    
+                    1.1.1.环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../../../Section1/Environment/Machine/language.html">
+            
+                <a href="../../../Section1/Environment/Machine/language.html">
+            
+                    
+                    1.1.2.语言显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../../../Section1/Environment/Machine/mount-disk.html">
+            
+                <a href="../../../Section1/Environment/Machine/mount-disk.html">
+            
+                    
+                    1.1.3.磁盘挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.4" data-path="../../../Section1/Environment/Machine/user-management.html">
+            
+                <a href="../../../Section1/Environment/Machine/user-management.html">
+            
+                    
+                    1.1.3.用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../../Section1/Environment/InstallSoftware/">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/">
+            
+                    
+                    1.2.软件安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" data-path="../../../Section1/Environment/InstallSoftware/PackageManagementTools/">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/PackageManagementTools/">
+            
+                    
+                    1.2.0 包管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../../../Section1/Environment/InstallSoftware/DevelopTools/">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/DevelopTools/">
+            
+                    
+                    1.2.1 开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.2.1" data-path="../../../Section1/Environment/InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                    
+                    1.2.1.1 node和npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../Section1/Docker/">
+            
+                <a href="../../../Section1/Docker/">
+            
+                    
+                    2.Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../../Section1/Docker/install-docker.html">
+            
+                <a href="../../../Section1/Docker/install-docker.html">
+            
+                    
+                    2.1.Docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Section Two: Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Build/">
+            
+                <a href="../../Build/">
+            
+                    
+                    编译相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Shell/">
+            
+                <a href="../../Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../Shell/Usage/">
+            
+                <a href="../../Shell/Usage/">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../Shell/Usage/linux-string.html">
+            
+                <a href="../../Shell/Usage/linux-string.html">
+            
+                    
+                    Linux 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../Shell/Usage/linux-remove-blank-line.html">
+            
+                <a href="../../Shell/Usage/linux-remove-blank-line.html">
+            
+                    
+                    Linux 去除空行的几种方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../Shell/sed/">
+            
+                <a href="../../Shell/sed/">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../Shell/set/">
+            
+                <a href="../../Shell/set/">
+            
+                    
+                    set
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../Shell/set/shell-set-fail-exit.html">
+            
+                <a href="../../Shell/set/shell-set-fail-exit.html">
+            
+                    
+                    set -o errexit, set -o pipefail与set -o nounset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../Shell/linux-file-encoding.html">
+            
+                <a href="../../Shell/linux-file-encoding.html">
+            
+                    
+                    Linux 文件编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Database/">
+            
+                <a href="../../Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../Database/MySQL.html">
+            
+                <a href="../../Database/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../VersionControl/">
+            
+                <a href="../../VersionControl/">
+            
+                    
+                    版本控制工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../VersionControl/svn.html">
+            
+                <a href="../../VersionControl/svn.html">
+            
+                    
+                    SVN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    持续集成相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.5.1.1" data-path="python-jenkins.html">
+            
+                <a href="python-jenkins.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 python-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.2" data-path="jenkinsapi.html">
+            
+                <a href="jenkinsapi.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 jenkinsapi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.3" data-path="jenkins-variable.html">
+            
+                <a href="jenkins-variable.html">
+            
+                    
+                    Jenkins 获取字符串变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.4" data-path="jenkins-clean-space.html">
+            
+                <a href="jenkins-clean-space.html">
+            
+                    
+                    Jenkins 清理空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../Coverity/">
+            
+                <a href="../Coverity/">
+            
+                    
+                    Coverity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.2.1" data-path="../Coverity/coverity-platform-install.html">
+            
+                <a href="../Coverity/coverity-platform-install.html">
+            
+                    
+                    Coverity 平台安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../AppendixA/">
+            
+                <a href="../../AppendixA/">
+            
+                    
+                    附录A 机器异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../AppendixConception/compuword.html">
+            
+                <a href="../../../AppendixConception/compuword.html">
+            
+                    
+                    附录 计算机概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Python 使用Jenkins Rest API 之 python-jenkins</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="python-&#x4F7F;&#x7528;jenkins-rest-api-&#x4E4B;-python-jenkins">Python &#x4F7F;&#x7528;Jenkins Rest API &#x4E4B; python-jenkins</h1>
+<ul>
+<li>&#x8BF4;&#x660E;<ul>
+<li><a href="https://pypi.python.org/pypi/python-jenkins/" target="_blank">Python-Jenkins &#x5B98;&#x7F51;</a></li>
+<li><a href="https://python-jenkins.readthedocs.io/en/latest/api.html" target="_blank">Python-Jenkins &#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-&#x57FA;&#x7840;&#x8BF4;&#x660E;">1 &#x57FA;&#x7840;&#x8BF4;&#x660E;</h2>
+<h3 id="11-&#x5B89;&#x88C5;">1.1 &#x5B89;&#x88C5;</h3>
+<pre><code class="lang-bash">pip install python-jenkins
+</code></pre>
+<h3 id="12-&#x57FA;&#x7840;&#x4F7F;&#x7528;">1.2 &#x57FA;&#x7840;&#x4F7F;&#x7528;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> jenkins
+<span class="hljs-comment">#&#x5B9A;&#x4E49;&#x8FDC;&#x7A0B;&#x7684;jenkins master server&#x7684;url&#xFF0C;&#x4EE5;&#x53CA;port</span>
+jenkins_server_url=<span class="hljs-string">&apos;xxxx:xxxx&apos;</span>
+<span class="hljs-comment">#&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x7684;User Id &#x548C; API Token&#xFF0C;&#x83B7;&#x53D6;&#x65B9;&#x5F0F;&#x540C;&#x4E0A;&#x6587;</span>
+user_id=<span class="hljs-string">&apos;xxxx&apos;</span>
+api_token=<span class="hljs-string">&apos;xxxx&apos;</span>
+<span class="hljs-comment">#&#x5B9E;&#x4F8B;&#x5316;jenkins&#x5BF9;&#x8C61;&#xFF0C;&#x8FDE;&#x63A5;&#x8FDC;&#x7A0B;&#x7684;jenkins master server</span>
+server=jenkins.Jenkins(jenkins_server_url, username=user_id, password=api_token)
+<span class="hljs-comment">#&#x6784;&#x5EFA;job&#x540D;&#x4E3A;job_name&#x7684;job&#xFF08;&#x4E0D;&#x5E26;&#x6784;&#x5EFA;&#x53C2;&#x6570;&#xFF09;</span>
+server.build_job(job_name)
+
+<span class="hljs-comment">#String&#x53C2;&#x6570;&#x5316;&#x6784;&#x5EFA;job&#x540D;&#x4E3A;job_name&#x7684;job, &#x53C2;&#x6570;param_dict&#x4E3A;&#x5B57;&#x5178;&#x5F62;&#x5F0F;&#xFF0C;&#x5982;&#xFF1A;param_dict= {&quot;param1&quot;&#xFF1A;&#x201C;value1&#x201D;&#xFF0C; &#x201C;param2&#x201D;&#xFF1A;&#x201C;value2&#x201D;} </span>
+server.build_job(job_name, parameters=param_dict)
+
+<span class="hljs-comment">#&#x83B7;&#x53D6;job&#x540D;&#x4E3A;job_name&#x7684;job&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;</span>
+server.get_job_info(job_name)
+
+<span class="hljs-comment">#&#x83B7;&#x53D6;job&#x540D;&#x4E3A;job_name&#x7684;job&#x7684;&#x6700;&#x540E;&#x6B21;&#x6784;&#x5EFA;&#x53F7;</span>
+server.get_job_info(job_name)<span class="hljs-string">&apos;lastBuild&apos;</span>
+
+<span class="hljs-comment">#&#x83B7;&#x53D6;job&#x540D;&#x4E3A;job_name&#x7684;job&#x7684;&#x67D0;&#x6B21;&#x6784;&#x5EFA;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x72B6;&#x6001;</span>
+server.get_build_info(job_name,build_number)[<span class="hljs-string">&apos;result&apos;</span>]&#x3000;&#x3000;   
+
+<span class="hljs-comment">#&#x5224;&#x65AD;job&#x540D;&#x4E3A;job_name&#x7684;job&#x7684;&#x67D0;&#x6B21;&#x6784;&#x5EFA;&#x662F;&#x5426;&#x8FD8;&#x5728;&#x6784;&#x5EFA;&#x4E2D;</span>
+server.get_build_info(job_name,build_number)[<span class="hljs-string">&apos;building&apos;</span>]
+</code></pre>
+<h2 id="2-&#x9519;&#x8BEF;&#x8BF4;&#x660E;">2 &#x9519;&#x8BEF;&#x8BF4;&#x660E;</h2>
+<h3 id="21-possibly-authentication-failed-403-forbidden">2.1 Possibly authentication failed [403]: Forbidden</h3>
+<p>&#x7248;&#x672C;&#x4FE1;&#x606F;</p>
+<pre><code>Jenkins: 2.150.1
+python-jenkins: 1.4.0
+&#x8BF4;&#x660E;&#xFF1A;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#xFF0C;python-jenkins==1.4.0&#x540C;&#x65F6;&#x517C;&#x5BB9;Jenkins1.6xx&#x7248;&#x672C;
+</code></pre><p>&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>server.get_whoami()
+xxxxxxxxxx jenkins.JenkinsException: Error <span class="hljs-keyword">in</span> request. Possibly authentication failed [<span class="hljs-number">403</span>]: Forbidden
+</code></pre>
+<p>&#x5B9A;&#x4F4D;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<pre><code>&#x53EF;&#x80FD;&#x539F;&#x56E0;&#xFF1A;
+1.&#x7528;&#x6237;&#x9274;&#x6743;&#x5931;&#x8D25;
+&#x7528;&#x6237;&#x540D;&#x548C;api-token&#x786E;&#x8BA4;&#x65E0;&#x8BEF;&#xFF0C;&#x6743;&#x9650;&#x8BBE;&#x7F6E;&#x6B63;&#x5E38;
+2.CSRF&#xFF08;&#x9632;&#x6B62;&#x8DE8;&#x7AD9;&#x70B9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;&#xFF09;&#x673A;&#x5236;&#x5F00;&#x542F;
+Jenkins2.x&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;CSRF&#x673A;&#x5236;&#x3002;&#x901A;&#x8FC7;&#x5B89;&#x5168;&#x8BBE;&#x7F6E;&#x9875;&#xFF0C;&#x5173;&#x95ED;CSRF&#x673A;&#x5236;&#xFF0C;&#x4F7F;&#x7528;&#xFF0C;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x4F9D;&#x7136;&#x5931;&#x8D25;&#x3002;&#x975E;CSRF&#x673A;&#x5236;&#x8BBE;&#x7F6E;&#x95EE;&#x9898;&#x3002;
+&gt; &#x6269;&#x5C55;&#xFF1A;https://wiki.jenkins.io/display/JENKINS/CSRF+Protection
+3.&#x4EE3;&#x7406;
+&#x901A;&#x8FC7;curl&#x547D;&#x4EE4;&#x8C03;&#x7528;API&#x63A5;&#x53E3;&#x5931;&#x8D25;&#xFF0C;&#x5173;&#x95ED;&#x673A;&#x5668;&#x4EE3;&#x7406;&#xFF0C;&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x3002;
+</code></pre><p>&#x539F;&#x56E0;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
+<pre><code class="lang-python">&#x673A;&#x5668;&#x8BBE;&#x7F6E;&#x4E86;&#x4EE3;&#x7406;&#xFF0C;&#x6267;&#x884C;&#x8C03;&#x7528;api&#x63A5;&#x53E3;&#x65F6;&#xFF0C;&#x8BF7;&#x6C42;&#x7ECF;&#x7531;&#x4EE3;&#x7406;&#x8F6C;&#x53D1;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x3002;
+Jenkins2.x&#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;CSRF&#x673A;&#x5236;&#xFF0C;python-jenkins==<span class="hljs-number">1.4</span><span class="hljs-number">.0</span>&#x7248;&#x672C;&#x80FD;&#x591F;&#x81EA;&#x52A8;
+&#x5173;&#x95ED;&#x4EE3;&#x7406;&#xFF0C;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x3002;
+</code></pre>
+<h3 id="22-&#x8C03;&#x7528;getversion&#x63D0;&#x793A;error-communicating-with-server">2.2 &#x8C03;&#x7528;get_version()&#x63D0;&#x793A;Error communicating with server</h3>
+<p><a href="https://www.jianshu.com/p/68dd714e6c31" target="_blank">https://www.jianshu.com/p/68dd714e6c31</a></p>
+<h2 id="3-&#x6269;&#x5C55;">3 &#x6269;&#x5C55;</h2>
+<h3 id="31-kerberos">3.1 kerberos</h3>
+<p><a href="https://pypi.org/project/kerberos/#description" target="_blank">https://pypi.org/project/kerberos/#description</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Jenkins">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="jenkinsapi.html" class="navigation navigation-next " aria-label="Next page: Python 使用Jenkins Rest API 之 jenkinsapi">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python 使用Jenkins Rest API 之 python-jenkins","level":"1.3.5.1.1","depth":4,"next":{"title":"Python 使用Jenkins Rest API 之 jenkinsapi","level":"1.3.5.1.2","depth":4,"path":"Section2/CongratulationIntegration/Jenkins/jenkinsapi.md","ref":"Section2/CongratulationIntegration/Jenkins/jenkinsapi.md","articles":[]},"previous":{"title":"Jenkins","level":"1.3.5.1","depth":3,"path":"Section2/CongratulationIntegration/Jenkins/README.md","ref":"Section2/CongratulationIntegration/Jenkins/README.md","articles":[{"title":"Python 使用Jenkins Rest API 之 python-jenkins","level":"1.3.5.1.1","depth":4,"path":"Section2/CongratulationIntegration/Jenkins/python-jenkins.md","ref":"Section2/CongratulationIntegration/Jenkins/python-jenkins.md","articles":[]},{"title":"Python 使用Jenkins Rest API 之 jenkinsapi","level":"1.3.5.1.2","depth":4,"path":"Section2/CongratulationIntegration/Jenkins/jenkinsapi.md","ref":"Section2/CongratulationIntegration/Jenkins/jenkinsapi.md","articles":[]},{"title":"Jenkins 获取字符串变量","level":"1.3.5.1.3","depth":4,"path":"Section2/CongratulationIntegration/Jenkins/jenkins-variable.md","ref":"Section2/CongratulationIntegration/Jenkins/jenkins-variable.md","articles":[]},{"title":"Jenkins 清理空间","level":"1.3.5.1.4","depth":4,"path":"Section2/CongratulationIntegration/Jenkins/jenkins-clean-space.md","ref":"Section2/CongratulationIntegration/Jenkins/jenkins-clean-space.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Section2/CongratulationIntegration/Jenkins/python-jenkins.md","mtime":"2019-02-24T16:39:56.889Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-24T16:47:02.436Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

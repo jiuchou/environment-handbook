@@ -1,0 +1,919 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.1.3.磁盘挂载 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="user-management.html" />
+    
+    
+    <link rel="prev" href="language.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Section One: Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../Editor/">
+            
+                <a href="../../Editor/">
+            
+                    
+                    0.编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../Editor/linux-vim-editor.html">
+            
+                <a href="../../Editor/linux-vim-editor.html">
+            
+                    
+                    0.1.Linux配置Vim编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../Editor/VSCode.html">
+            
+                <a href="../../Editor/VSCode.html">
+            
+                    
+                    0.2.Visual Studio Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    1.环境管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1.1.机器相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="env-variable.html">
+            
+                <a href="env-variable.html">
+            
+                    
+                    1.1.1.环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="language.html">
+            
+                <a href="language.html">
+            
+                    
+                    1.1.2.语言显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.1.3" data-path="mount-disk.html">
+            
+                <a href="mount-disk.html">
+            
+                    
+                    1.1.3.磁盘挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.4" data-path="user-management.html">
+            
+                <a href="user-management.html">
+            
+                    
+                    1.1.3.用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../InstallSoftware/">
+            
+                <a href="../InstallSoftware/">
+            
+                    
+                    1.2.软件安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" data-path="../InstallSoftware/PackageManagementTools/">
+            
+                <a href="../InstallSoftware/PackageManagementTools/">
+            
+                    
+                    1.2.0 包管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../InstallSoftware/DevelopTools/">
+            
+                <a href="../InstallSoftware/DevelopTools/">
+            
+                    
+                    1.2.1 开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.2.1" data-path="../InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                <a href="../InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                    
+                    1.2.1.1 node和npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../Docker/">
+            
+                <a href="../../Docker/">
+            
+                    
+                    2.Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../Docker/install-docker.html">
+            
+                <a href="../../Docker/install-docker.html">
+            
+                    
+                    2.1.Docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../Section2/">
+            
+                <a href="../../../Section2/">
+            
+                    
+                    Section Two: Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../Section2/Build/">
+            
+                <a href="../../../Section2/Build/">
+            
+                    
+                    编译相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../Section2/Shell/">
+            
+                <a href="../../../Section2/Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../Section2/Shell/Usage/">
+            
+                <a href="../../../Section2/Shell/Usage/">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../../Section2/Shell/Usage/linux-string.html">
+            
+                <a href="../../../Section2/Shell/Usage/linux-string.html">
+            
+                    
+                    Linux 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../../Section2/Shell/Usage/linux-remove-blank-line.html">
+            
+                <a href="../../../Section2/Shell/Usage/linux-remove-blank-line.html">
+            
+                    
+                    Linux 去除空行的几种方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../Section2/Shell/sed/">
+            
+                <a href="../../../Section2/Shell/sed/">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../../Section2/Shell/set/">
+            
+                <a href="../../../Section2/Shell/set/">
+            
+                    
+                    set
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../../Section2/Shell/set/shell-set-fail-exit.html">
+            
+                <a href="../../../Section2/Shell/set/shell-set-fail-exit.html">
+            
+                    
+                    set -o errexit, set -o pipefail与set -o nounset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../../Section2/Shell/linux-file-encoding.html">
+            
+                <a href="../../../Section2/Shell/linux-file-encoding.html">
+            
+                    
+                    Linux 文件编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../../Section2/Database/">
+            
+                <a href="../../../Section2/Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../../Section2/Database/MySQL.html">
+            
+                <a href="../../../Section2/Database/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../../Section2/VersionControl/">
+            
+                <a href="../../../Section2/VersionControl/">
+            
+                    
+                    版本控制工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../../Section2/VersionControl/svn.html">
+            
+                <a href="../../../Section2/VersionControl/svn.html">
+            
+                    
+                    SVN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../../Section2/CongratulationIntegration/">
+            
+                <a href="../../../Section2/CongratulationIntegration/">
+            
+                    
+                    持续集成相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../../Section2/CongratulationIntegration/Jenkins/">
+            
+                <a href="../../../Section2/CongratulationIntegration/Jenkins/">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1.1" data-path="../../../Section2/CongratulationIntegration/Jenkins/python-jenkins.html">
+            
+                <a href="../../../Section2/CongratulationIntegration/Jenkins/python-jenkins.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 python-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.2" data-path="../../../Section2/CongratulationIntegration/Jenkins/jenkinsapi.html">
+            
+                <a href="../../../Section2/CongratulationIntegration/Jenkins/jenkinsapi.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 jenkinsapi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.3" data-path="../../../Section2/CongratulationIntegration/Jenkins/jenkins-variable.html">
+            
+                <a href="../../../Section2/CongratulationIntegration/Jenkins/jenkins-variable.html">
+            
+                    
+                    Jenkins 获取字符串变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.4" data-path="../../../Section2/CongratulationIntegration/Jenkins/jenkins-clean-space.html">
+            
+                <a href="../../../Section2/CongratulationIntegration/Jenkins/jenkins-clean-space.html">
+            
+                    
+                    Jenkins 清理空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../../Section2/CongratulationIntegration/Coverity/">
+            
+                <a href="../../../Section2/CongratulationIntegration/Coverity/">
+            
+                    
+                    Coverity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.2.1" data-path="../../../Section2/CongratulationIntegration/Coverity/coverity-platform-install.html">
+            
+                <a href="../../../Section2/CongratulationIntegration/Coverity/coverity-platform-install.html">
+            
+                    
+                    Coverity 平台安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../../Section2/AppendixA/">
+            
+                <a href="../../../Section2/AppendixA/">
+            
+                    
+                    附录A 机器异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../AppendixConception/compuword.html">
+            
+                <a href="../../../AppendixConception/compuword.html">
+            
+                    
+                    附录 计算机概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >1.1.3.磁盘挂载</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="113&#x78C1;&#x76D8;&#x6302;&#x8F7D;">1.1.3.&#x78C1;&#x76D8;&#x6302;&#x8F7D;</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#31&#x78C1;&#x76D8;&#x6302;&#x8F7D;">3.1.&#x78C1;&#x76D8;&#x6302;&#x8F7D;</a><ul>
+<li><a href="#1-&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x4E4B;linux">1 &#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x4E4B;Linux</a><ul>
+<li><a href="#11-&#x4ECB;&#x7ECD;">1.1 &#x4ECB;&#x7ECD;</a></li>
+<li><a href="#12-&#x5206;&#x533A;&#x521B;&#x5EFA;">1.2 &#x5206;&#x533A;&#x521B;&#x5EFA;</a><ul>
+<li><a href="#121-fdisk&#x547D;&#x4EE4;&#x4ECB;&#x7ECD;">1.2.1 fdisk&#x547D;&#x4EE4;&#x4ECB;&#x7ECD;</a></li>
+<li><a href="#122-&#x521B;&#x5EFA;&#x65B0;&#x5206;&#x533A;">1.2.2 &#x521B;&#x5EFA;&#x65B0;&#x5206;&#x533A;</a></li>
+</ul>
+</li>
+<li><a href="#13-&#x5206;&#x533A;&#x683C;&#x5F0F;&#x5316;">1.3 &#x5206;&#x533A;&#x683C;&#x5F0F;&#x5316;</a></li>
+<li><a href="#14-&#x5206;&#x533A;&#x6302;&#x8F7D;">1.4 &#x5206;&#x533A;&#x6302;&#x8F7D;</a></li>
+<li><a href="#5-&#x6C38;&#x4E45;&#x6302;&#x8F7D;">5. &#x6C38;&#x4E45;&#x6302;&#x8F7D;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="1-&#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x4E4B;linux">1 &#x78C1;&#x76D8;&#x6302;&#x8F7D;&#x4E4B;Linux</h2>
+<blockquote>
+<p>&#x6D4B;&#x8BD5;&#x60C5;&#x51B5;:</p>
+<p>&#x200B;    Ubuntu14.04: &#x4EB2;&#x6D4B;&#x53EF;&#x7528;</p>
+</blockquote>
+<h3 id="11-&#x4ECB;&#x7ECD;">1.1 &#x4ECB;&#x7ECD;</h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x5206;&#x533A;&#x6302;&#x8F7D; <code>df -TH</code></li>
+<li>&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x5206;&#x533A;&#x5B58;&#x5728; <code>fdisk -lu</code></li>
+</ul>
+<p>&#x5982;&#x679C;&#x5B58;&#x5728;&#x4E0B;&#x56FE;&#x4E2D;&#x5708;&#x51FA;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8BF4;&#x660E;&#x5206;&#x533A;&#x521B;&#x5EFA;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x683C;&#x5F0F;&#x5316;</p>
+<p><img src="image/mount_disk_1.PNG" alt=""></p>
+<h3 id="12-&#x5206;&#x533A;&#x521B;&#x5EFA;">1.2 &#x5206;&#x533A;&#x521B;&#x5EFA;</h3>
+<h4 id="121-fdisk&#x547D;&#x4EE4;&#x4ECB;&#x7ECD;">1.2.1 fdisk&#x547D;&#x4EE4;&#x4ECB;&#x7ECD;</h4>
+<pre><code># m &#xFF1A;help
+# p &#xFF1A;&#x6253;&#x5370;&#x5206;&#x533A;&#x8868;
+# n &#xFF1A;&#x65B0;&#x5EFA;&#x5206;&#x533A;
+# w &#xFF1B;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x5E76;&#x9000;&#x51FA;fdisk
+</code></pre><h4 id="122-&#x521B;&#x5EFA;&#x65B0;&#x5206;&#x533A;">1.2.2 &#x521B;&#x5EFA;&#x65B0;&#x5206;&#x533A;</h4>
+<pre><code>fdisk /dev/xvde #&#x9700;&#x8981;&#x5206;&#x533A;&#x7684;&#x76D8;   
+# p &#xFF1A;&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x5206;&#x533A;&#x4EE5;&#x53CA;&#x5176;&#x5927;&#x5C0F;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x65B0;&#x5206;&#x533A;
+# n &#xFF1A;&#x521B;&#x5EFA;&#x65B0;&#x5206;&#x533A;&#xFF0C;&#xFF08;&#x51FA;&#x73B0; p &#x548C; e&#x547D;&#x4EE4;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;p&#x548C;fdisk&#x5F00;&#x59CB;&#x7684;p&#x4E0D;&#x4E00;&#x6837;&#xFF09;&#x8F93;&#x5165;p
+# partition number&#xFF1A;&#x521B;&#x5EFA;&#x5206;&#x533A;&#x7F16;&#x53F7;
+# &#x63A5;&#x7740;&#x81EA;&#x5DF1;&#x8BBE;&#x5B9A;&#x5206;&#x533A;&#x5F00;&#x59CB;&#x4EE5;&#x53CA;&#x7ED3;&#x675F;&#x67F1;&#x53F7;
+#
+# &#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x4F7F;&#x7528; &#xFF1A;p  &#x67E5;&#x770B;&#x521B;&#x5EFA;&#x7684;&#x5206;&#x533A;
+# &#x5982;&#x679C;&#x786E;&#x5B9A;&#xFF0C;&#x4F7F;&#x7528;&#xFF1A;w  &#x4FDD;&#x5B58;&#x9000;&#x51FA;
+</code></pre><h3 id="13-&#x5206;&#x533A;&#x683C;&#x5F0F;&#x5316;">1.3 &#x5206;&#x533A;&#x683C;&#x5F0F;&#x5316;</h3>
+<pre><code>#&#x683C;&#x5F0F;&#x5316;&#x5206;&#x533A;
+mkfs -V -t ext4 -c /dev/xvde1
+</code></pre><h3 id="14-&#x5206;&#x533A;&#x6302;&#x8F7D;">1.4 &#x5206;&#x533A;&#x6302;&#x8F7D;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x521B;&#x5EFA;&#x76EE;&#x5F55;: /home/E_xvde1/ </span>
+<span class="hljs-comment"># &#x5C06;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x5206;&#x533A; /dev/xvde1 &#x6302;&#x8F7D;&#x76EE;&#x5F55;&#x4E0A;&#xFF1A;</span>
+mount /dev/xvde1 /home/E_xvde1/
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x6302;&#x8F7D;&#x60C5;&#x51B5;</span>
+df -TH
+
+<span class="hljs-comment"># &#x53D6;&#x6D88;&#x6302;&#x8F7D;</span>
+umount /dev/xvde1
+</code></pre>
+<h3 id="5-&#x6C38;&#x4E45;&#x6302;&#x8F7D;">5. &#x6C38;&#x4E45;&#x6302;&#x8F7D;</h3>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x78C1;&#x76D8;&#x6C38;&#x4E45;&#x6302;&#x8F7D;</span>
+vim /etc/fstab
+<span class="hljs-comment"># &#x5728;&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x6302;&#x8F7D;&#x78C1;&#x76D8;&#x4FE1;&#x606F;&#xFF1A;</span>
+<span class="hljs-comment"># &#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF1A; &#x4E00;&#x5B9A;&#x8981;&#x4ED4;&#x7EC6;&#x68C0;&#x67E5;&#xFF0C;&#x4E0D;&#x80FD;&#x5199;&#x9519;&#x5426;&#x5219;&#x5173;&#x673A;&#x4E4B;&#x540E;&#x5C31;&#x4E0D;&#x80FD;&#x5F00;&#x673A;&#x4E86;</span>
+/dev/xvde1    /home/E_xvde1        ext4    defaults    1    1
+<span class="hljs-comment"># &#x91CD;&#x542F;&#x751F;&#x6548;</span>
+
+<span class="hljs-comment"># &#x53D6;&#x6D88;&#x6C38;&#x4E45;&#x6302;&#x8F7D;</span>
+<span class="hljs-comment"># &#x5220;&#x9664;&#x6DFB;&#x52A0;&#x7684;&#x884C;&#xFF0C;&#x91CD;&#x542F;</span>
+</code></pre>
+<h2 id="&#x6269;&#x5C55;">&#x6269;&#x5C55;</h2>
+<h3 id="linux&#x4E4B;fstab&#x6587;&#x4EF6;&#x8BE6;&#x89E3;">linux&#x4E4B;fstab&#x6587;&#x4EF6;&#x8BE6;&#x89E3;</h3>
+<p><a href="https://blog.csdn.net/richerg85/article/details/17917129" target="_blank">https://blog.csdn.net/richerg85/article/details/17917129</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="language.html" class="navigation navigation-prev " aria-label="Previous page: 1.1.2.语言显示">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="user-management.html" class="navigation navigation-next " aria-label="Next page: 1.1.3.用户管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.1.3.磁盘挂载","level":"1.2.2.1.3","depth":4,"next":{"title":"1.1.3.用户管理","level":"1.2.2.1.4","depth":4,"path":"Section1/Environment/Machine/user-management.md","ref":"Section1/Environment/Machine/user-management.md","articles":[]},"previous":{"title":"1.1.2.语言显示","level":"1.2.2.1.2","depth":4,"path":"Section1/Environment/Machine/language.md","ref":"Section1/Environment/Machine/language.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Section1/Environment/Machine/mount-disk.md","mtime":"2019-02-24T16:39:56.876Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-24T16:47:02.436Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

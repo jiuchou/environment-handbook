@@ -1,0 +1,846 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.Docker · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="install-docker.html" />
+    
+    
+    <link rel="prev" href="../Environment/InstallSoftware/DevelopTools/node-and-npm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Section One: Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Editor/">
+            
+                <a href="../Editor/">
+            
+                    
+                    0.编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../Editor/linux-vim-editor.html">
+            
+                <a href="../Editor/linux-vim-editor.html">
+            
+                    
+                    0.1.Linux配置Vim编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../Editor/VSCode.html">
+            
+                <a href="../Editor/VSCode.html">
+            
+                    
+                    0.2.Visual Studio Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Environment/">
+            
+                <a href="../Environment/">
+            
+                    
+                    1.环境管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../Environment/Machine/">
+            
+                <a href="../Environment/Machine/">
+            
+                    
+                    1.1.机器相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../Environment/Machine/env-variable.html">
+            
+                <a href="../Environment/Machine/env-variable.html">
+            
+                    
+                    1.1.1.环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../Environment/Machine/language.html">
+            
+                <a href="../Environment/Machine/language.html">
+            
+                    
+                    1.1.2.语言显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../Environment/Machine/mount-disk.html">
+            
+                <a href="../Environment/Machine/mount-disk.html">
+            
+                    
+                    1.1.3.磁盘挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.4" data-path="../Environment/Machine/user-management.html">
+            
+                <a href="../Environment/Machine/user-management.html">
+            
+                    
+                    1.1.3.用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../Environment/InstallSoftware/">
+            
+                <a href="../Environment/InstallSoftware/">
+            
+                    
+                    1.2.软件安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" data-path="../Environment/InstallSoftware/PackageManagementTools/">
+            
+                <a href="../Environment/InstallSoftware/PackageManagementTools/">
+            
+                    
+                    1.2.0 包管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../Environment/InstallSoftware/DevelopTools/">
+            
+                <a href="../Environment/InstallSoftware/DevelopTools/">
+            
+                    
+                    1.2.1 开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.2.1" data-path="../Environment/InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                <a href="../Environment/InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                    
+                    1.2.1.1 node和npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="install-docker.html">
+            
+                <a href="install-docker.html">
+            
+                    
+                    2.1.Docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Section2/">
+            
+                <a href="../../Section2/">
+            
+                    
+                    Section Two: Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Section2/Build/">
+            
+                <a href="../../Section2/Build/">
+            
+                    
+                    编译相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Section2/Shell/">
+            
+                <a href="../../Section2/Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../Section2/Shell/Usage/">
+            
+                <a href="../../Section2/Shell/Usage/">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../Section2/Shell/Usage/linux-string.html">
+            
+                <a href="../../Section2/Shell/Usage/linux-string.html">
+            
+                    
+                    Linux 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../Section2/Shell/Usage/linux-remove-blank-line.html">
+            
+                <a href="../../Section2/Shell/Usage/linux-remove-blank-line.html">
+            
+                    
+                    Linux 去除空行的几种方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../Section2/Shell/sed/">
+            
+                <a href="../../Section2/Shell/sed/">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../Section2/Shell/set/">
+            
+                <a href="../../Section2/Shell/set/">
+            
+                    
+                    set
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../Section2/Shell/set/shell-set-fail-exit.html">
+            
+                <a href="../../Section2/Shell/set/shell-set-fail-exit.html">
+            
+                    
+                    set -o errexit, set -o pipefail与set -o nounset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../Section2/Shell/linux-file-encoding.html">
+            
+                <a href="../../Section2/Shell/linux-file-encoding.html">
+            
+                    
+                    Linux 文件编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Section2/Database/">
+            
+                <a href="../../Section2/Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../Section2/Database/MySQL.html">
+            
+                <a href="../../Section2/Database/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../Section2/VersionControl/">
+            
+                <a href="../../Section2/VersionControl/">
+            
+                    
+                    版本控制工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../Section2/VersionControl/svn.html">
+            
+                <a href="../../Section2/VersionControl/svn.html">
+            
+                    
+                    SVN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../Section2/CongratulationIntegration/">
+            
+                <a href="../../Section2/CongratulationIntegration/">
+            
+                    
+                    持续集成相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../Section2/CongratulationIntegration/Jenkins/">
+            
+                <a href="../../Section2/CongratulationIntegration/Jenkins/">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1.1" data-path="../../Section2/CongratulationIntegration/Jenkins/python-jenkins.html">
+            
+                <a href="../../Section2/CongratulationIntegration/Jenkins/python-jenkins.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 python-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.2" data-path="../../Section2/CongratulationIntegration/Jenkins/jenkinsapi.html">
+            
+                <a href="../../Section2/CongratulationIntegration/Jenkins/jenkinsapi.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 jenkinsapi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.3" data-path="../../Section2/CongratulationIntegration/Jenkins/jenkins-variable.html">
+            
+                <a href="../../Section2/CongratulationIntegration/Jenkins/jenkins-variable.html">
+            
+                    
+                    Jenkins 获取字符串变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.4" data-path="../../Section2/CongratulationIntegration/Jenkins/jenkins-clean-space.html">
+            
+                <a href="../../Section2/CongratulationIntegration/Jenkins/jenkins-clean-space.html">
+            
+                    
+                    Jenkins 清理空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../Section2/CongratulationIntegration/Coverity/">
+            
+                <a href="../../Section2/CongratulationIntegration/Coverity/">
+            
+                    
+                    Coverity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.2.1" data-path="../../Section2/CongratulationIntegration/Coverity/coverity-platform-install.html">
+            
+                <a href="../../Section2/CongratulationIntegration/Coverity/coverity-platform-install.html">
+            
+                    
+                    Coverity 平台安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../Section2/AppendixA/">
+            
+                <a href="../../Section2/AppendixA/">
+            
+                    
+                    附录A 机器异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../AppendixConception/compuword.html">
+            
+                <a href="../../AppendixConception/compuword.html">
+            
+                    
+                    附录 计算机概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2.Docker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="2docker">2.Docker</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Environment/InstallSoftware/DevelopTools/node-and-npm.html" class="navigation navigation-prev " aria-label="Previous page: 1.2.1.1 node和npm">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="install-docker.html" class="navigation navigation-next " aria-label="Next page: 2.1.Docker安装">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.Docker","level":"1.2.3","depth":2,"next":{"title":"2.1.Docker安装","level":"1.2.3.1","depth":3,"path":"Section1/Docker/install-docker.md","ref":"Section1/Docker/install-docker.md","articles":[]},"previous":{"title":"1.2.1.1 node和npm","level":"1.2.2.2.2.1","depth":5,"path":"Section1/Environment/InstallSoftware/DevelopTools/node-and-npm.md","ref":"Section1/Environment/InstallSoftware/DevelopTools/node-and-npm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Section1/Docker/README.md","mtime":"2019-02-24T16:39:56.841Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-24T16:47:02.436Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

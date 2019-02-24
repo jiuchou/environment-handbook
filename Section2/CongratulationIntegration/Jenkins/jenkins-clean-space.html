@@ -1,0 +1,1044 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Jenkins 清理空间 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Coverity/" />
+    
+    
+    <link rel="prev" href="jenkins-variable.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../Section1/">
+            
+                <a href="../../../Section1/">
+            
+                    
+                    Section One: Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../Section1/Editor/">
+            
+                <a href="../../../Section1/Editor/">
+            
+                    
+                    0.编辑器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../Section1/Editor/linux-vim-editor.html">
+            
+                <a href="../../../Section1/Editor/linux-vim-editor.html">
+            
+                    
+                    0.1.Linux配置Vim编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../Section1/Editor/VSCode.html">
+            
+                <a href="../../../Section1/Editor/VSCode.html">
+            
+                    
+                    0.2.Visual Studio Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../Section1/Environment/">
+            
+                <a href="../../../Section1/Environment/">
+            
+                    
+                    1.环境管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../Section1/Environment/Machine/">
+            
+                <a href="../../../Section1/Environment/Machine/">
+            
+                    
+                    1.1.机器相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1.1" data-path="../../../Section1/Environment/Machine/env-variable.html">
+            
+                <a href="../../../Section1/Environment/Machine/env-variable.html">
+            
+                    
+                    1.1.1.环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.2" data-path="../../../Section1/Environment/Machine/language.html">
+            
+                <a href="../../../Section1/Environment/Machine/language.html">
+            
+                    
+                    1.1.2.语言显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.3" data-path="../../../Section1/Environment/Machine/mount-disk.html">
+            
+                <a href="../../../Section1/Environment/Machine/mount-disk.html">
+            
+                    
+                    1.1.3.磁盘挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.1.4" data-path="../../../Section1/Environment/Machine/user-management.html">
+            
+                <a href="../../../Section1/Environment/Machine/user-management.html">
+            
+                    
+                    1.1.3.用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../../Section1/Environment/InstallSoftware/">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/">
+            
+                    
+                    1.2.软件安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" data-path="../../../Section1/Environment/InstallSoftware/PackageManagementTools/">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/PackageManagementTools/">
+            
+                    
+                    1.2.0 包管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../../../Section1/Environment/InstallSoftware/DevelopTools/">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/DevelopTools/">
+            
+                    
+                    1.2.1 开发工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.2.1" data-path="../../../Section1/Environment/InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                <a href="../../../Section1/Environment/InstallSoftware/DevelopTools/node-and-npm.html">
+            
+                    
+                    1.2.1.1 node和npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../Section1/Docker/">
+            
+                <a href="../../../Section1/Docker/">
+            
+                    
+                    2.Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../../Section1/Docker/install-docker.html">
+            
+                <a href="../../../Section1/Docker/install-docker.html">
+            
+                    
+                    2.1.Docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Section Two: Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Build/">
+            
+                <a href="../../Build/">
+            
+                    
+                    编译相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Shell/">
+            
+                <a href="../../Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../Shell/Usage/">
+            
+                <a href="../../Shell/Usage/">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../Shell/Usage/linux-string.html">
+            
+                <a href="../../Shell/Usage/linux-string.html">
+            
+                    
+                    Linux 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../Shell/Usage/linux-remove-blank-line.html">
+            
+                <a href="../../Shell/Usage/linux-remove-blank-line.html">
+            
+                    
+                    Linux 去除空行的几种方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../Shell/sed/">
+            
+                <a href="../../Shell/sed/">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../Shell/set/">
+            
+                <a href="../../Shell/set/">
+            
+                    
+                    set
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../Shell/set/shell-set-fail-exit.html">
+            
+                <a href="../../Shell/set/shell-set-fail-exit.html">
+            
+                    
+                    set -o errexit, set -o pipefail与set -o nounset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../Shell/linux-file-encoding.html">
+            
+                <a href="../../Shell/linux-file-encoding.html">
+            
+                    
+                    Linux 文件编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Database/">
+            
+                <a href="../../Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../Database/MySQL.html">
+            
+                <a href="../../Database/MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../VersionControl/">
+            
+                <a href="../../VersionControl/">
+            
+                    
+                    版本控制工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../VersionControl/svn.html">
+            
+                <a href="../../VersionControl/svn.html">
+            
+                    
+                    SVN
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    持续集成相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1.1" data-path="python-jenkins.html">
+            
+                <a href="python-jenkins.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 python-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.2" data-path="jenkinsapi.html">
+            
+                <a href="jenkinsapi.html">
+            
+                    
+                    Python 使用Jenkins Rest API 之 jenkinsapi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.1.3" data-path="jenkins-variable.html">
+            
+                <a href="jenkins-variable.html">
+            
+                    
+                    Jenkins 获取字符串变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5.1.4" data-path="jenkins-clean-space.html">
+            
+                <a href="jenkins-clean-space.html">
+            
+                    
+                    Jenkins 清理空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../Coverity/">
+            
+                <a href="../Coverity/">
+            
+                    
+                    Coverity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.2.1" data-path="../Coverity/coverity-platform-install.html">
+            
+                <a href="../Coverity/coverity-platform-install.html">
+            
+                    
+                    Coverity 平台安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../AppendixA/">
+            
+                <a href="../../AppendixA/">
+            
+                    
+                    附录A 机器异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../AppendixConception/compuword.html">
+            
+                <a href="../../../AppendixConception/compuword.html">
+            
+                    
+                    附录 计算机概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Jenkins 清理空间</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jenkins-&#x6E05;&#x7406;&#x7A7A;&#x95F4;">Jenkins &#x6E05;&#x7406;&#x7A7A;&#x95F4;</h1>
+<blockquote>
+<p>Jenkins&#x5E38;&#x7528;&#x811A;&#x672C;&#xFF1A;</p>
+<p>&#x200B;    <a href="https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console" target="_blank">Jenkins Script Console</a></p>
+</blockquote>
+<h2 id="1-&#x5386;&#x53F2;&#x8BB0;&#x5F55;">1 &#x5386;&#x53F2;&#x8BB0;&#x5F55;</h2>
+<blockquote>
+<p>script&#x9875;&#x9762;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;</p>
+<ol>
+<li>&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;-&#x811A;&#x672C;&#x547D;&#x4EE4;&#x884C;</li>
+<li>JenkinsUrl/script</li>
+</ol>
+</blockquote>
+<p>&#x5220;&#x9664;build&#x5386;&#x53F2;&#x8BB0;&#x5F55;</p>
+<p><strong>Jenkins &#x670D;&#x52A1;&#x5668;&#x540E;&#x53F0;</strong></p>
+<ol>
+<li><p>Check your home jenkins directory: <strong>&quot;Manage Jenkins&quot; ==&gt; &quot;Configure System&quot;</strong></p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Command for delete all jenkins job builds</span>
+<span class="hljs-built_in">cd</span> /jenkins_home/<span class="hljs-built_in">jobs</span>
+rm -rf */builds/*
+
+<span class="hljs-comment"># &#x5220;&#x9664;30&#x5929;&#x4E4B;&#x524D;&#x7684;&#x6784;&#x5EFA;&#x8BB0;&#x5F55;</span>
+find [1-9]* -type d -mtime +30 -exec rm -rf {} \;
+
+<span class="hljs-comment"># &#x5220;&#x9664;Build Number&#x4E3A;1&#x5230;7&#x7684;&#x6784;&#x5EFA;&#x8BB0;&#x5F55;</span>
+find [1-7] -type d -exec rm -rf {} \;
+</code></pre>
+</li>
+<li><p>After delete should reload config: <strong>&quot;Manage Jenkins&quot; ==&gt; &quot;Reload Configuration from Disk&quot;</strong></p>
+</li>
+</ol>
+<p><strong>&#x811A;&#x672C;&#x547D;&#x4EE4;&#x884C;</strong></p>
+<blockquote>
+<p>Groovy Scripts using Hudson API </p>
+</blockquote>
+<p>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5DE5;&#x7A0B;&#x7684;build&#x8BB0;&#x5F55;</p>
+<pre><code class="lang-groovy">Jenkins.instance.getItemByFullName({YOUR_JOB_NAME}).builds.findAll { it.number &gt;={START_SN} &amp;&amp; it.number &lt;= ${END_SN} }.each { it.delete() }
+</code></pre>
+<p>&#x5220;&#x9664;&#x6240;&#x6709;&#x5DE5;&#x7A0B;&#x7684;build&#x8BB0;&#x5F55;</p>
+<pre><code class="lang-groovy"><span class="hljs-keyword">import</span> hudson.model.*
+<span class="hljs-comment">// For each project</span>
+<span class="hljs-keyword">for</span>(item <span class="hljs-keyword">in</span> Hudson.instance.items) {
+  <span class="hljs-comment">// check that job is not building</span>
+  <span class="hljs-keyword">if</span>(!item.isBuilding()) {
+    System.out.println(<span class="hljs-string">&quot;Deleting all builds of job &quot;</span>+item.name)
+    <span class="hljs-keyword">for</span>(build <span class="hljs-keyword">in</span> item.getBuilds()){
+      build.delete()
+    }  
+  }
+  <span class="hljs-keyword">else</span> {
+    System.out.println(<span class="hljs-string">&quot;Skipping job &quot;</span>+item.name+<span class="hljs-string">&quot;, currently building&quot;</span>)
+  }
+}
+</code></pre>
+<p>Or for cleaning all workspaces :</p>
+<pre><code>import hudson.model.*
+// For each project
+for(item in Hudson.instance.items) {
+  // check that job is not building
+  if(!item.isBuilding()) {
+    println(&quot;Wiping out workspace of job &quot;+item.name)
+    item.doDoWipeOutWorkspace()
+  }
+  else {
+    println(&quot;Skipping job &quot;+item.name+&quot;, currently building&quot;)
+  }
+}
+</code></pre><p>There are a lot of examples on the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Script+Console" target="_blank">Jenkins wiki</a> </p>
+<p><strong>Linux &#x547D;&#x4EE4;&#x884C;&#x4E4B; curl</strong></p>
+<pre><code class="lang-bash">curl -u userName:apiToken -X POST http://jenkins-host.tld:8080/jenkins/job/myJob/[1-56]/<span class="hljs-keyword">do</span>DeleteAll
+</code></pre>
+<p><strong>Linux &#x547D;&#x4EE4;&#x884C;&#x4E4B; jenkins-cli</strong></p>
+<pre><code class="lang-bash">java -jar jenkins-cli.jar <span class="hljs-_">-s</span> http://my.jenkins.host delete-builds myproject <span class="hljs-string">&apos;1-7499&apos;</span> --username <span class="hljs-variable">$user</span> --password <span class="hljs-variable">$password</span>
+</code></pre>
+<p>&#x91CD;&#x7F6E;Jenkins&#x7684;build&#x5E8F;&#x53F7;</p>
+<pre><code class="lang-groovy">item = Jenkins.instance.getItemByFullName(<span class="hljs-string">&quot;your-job-name-here&quot;</span>)
+<span class="hljs-comment">//THIS WILL REMOVE ALL BUILD HISTORY</span>
+item.builds.each() { build -&gt;
+  build.delete()
+}
+item.updateNextBuildNumber(<span class="hljs-number">1</span>)
+</code></pre>
+<h2 id="2-&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;">2 &#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</h2>
+<h3 id="21-&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;">2.1 &#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</h3>
+<h4 id="211-&#x754C;&#x9762;&#x64CD;&#x4F5C;">2.1.1 &#x754C;&#x9762;&#x64CD;&#x4F5C;</h4>
+<p>&#x8FDB;&#x5165;&#x5DE5;&#x7A0B;&#xFF0C;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x3002;</p>
+<h4 id="212-&#x670D;&#x52A1;&#x5668;&#x540E;&#x53F0;">2.1.2 &#x670D;&#x52A1;&#x5668;&#x540E;&#x53F0;</h4>
+<p><strong>&#x4F7F;&#x7528;master&#x8FDB;&#x884C;&#x6784;&#x5EFA;</strong></p>
+<blockquote>
+<p>&#x9664;&#x4E86;&#x4E00;&#x4E9B;Jenkins&#x76F8;&#x5173;&#x7684;&#x7EF4;&#x62A4;Jobs&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;master&#x8FD0;&#x884C;&#x5E38;&#x89C4;&#x7F16;&#x8BD1;&#x7B49;&#x6784;&#x5EFA;&#x4EFB;&#x52A1;&#x3002; </p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;master&#x8FD0;&#x884C;&#x6784;&#x5EFA;&#xFF0C;&#x9ED8;&#x8BA4;&#x6784;&#x5EFA;&#x7684;&#x5DE5;&#x4F5C;&#x533A; <code>jenkins_home/jobs/myJob/workspace</code>&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x4F1A;&#x5360;&#x7528;master &#x4E0A;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#xFF0C;&#x4E00;&#x4F1A;&#x5F71;&#x54CD; <code>jenkins_home</code> &#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x6570;&#x636E;&#x5907;&#x4EFD;&#x7684;&#x65F6;&#x5019; workspace &#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5907;&#x4EFD;&#x3002; </p>
+<p><strong>&#x4F7F;&#x7528;slave&#x8FDB;&#x884C;&#x6784;&#x5EFA;</strong></p>
+<p>&#x4F7F;&#x7528;slave&#x8FDB;&#x884C;&#x6784;&#x5EFA;&#xFF0C;&#x6784;&#x5EFA;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x4F1A;&#x521B;&#x5EFA;&#x5728;slave&#x4E0A;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;&#x662F;  <code>&lt;Slave remote root directory&gt;/workspace/myJob</code>&#xFF0C; &#x5F53;&#x7136;&#x8FD9;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x4F1A;&#x5360;&#x7528;slave&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#xFF0C;slave&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x6EE1;&#x4F1A;&#x9020;&#x6210;&#x6784;&#x5EFA;&#x5931;&#x8D25;&#x3002; </p>
+<h4 id="213-&#x914D;&#x7F6E;-&#x4E22;&#x5F03;&#x65E7;&#x7684;&#x6784;&#x5EFA;discard-old-builds">2.1.3 &#x914D;&#x7F6E;-&#x4E22;&#x5F03;&#x65E7;&#x7684;&#x6784;&#x5EFA;(Discard old builds)</h4>
+<p>&#x628A;&#x4EE5;&#x524D;&#x6784;&#x5EFA;&#x8FC7;&#x7684;&#x8FC7;&#x65F6;&#x5386;&#x53F2;&#x6570;&#x636E;&#x81EA;&#x52A8;&#x6E05;&#x9664;&#x6389;&#xFF0C;&#x4FDD;&#x7559;&#x6700;&#x8FD1;&#x66F4;&#x65B0;&#x7684;&#x5929;&#x6570;&#x548C;&#x4E2A;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x63A7;&#x5236;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x7684;&#x80FD;&#x529B;&#x3002;</p>
+<blockquote>
+<p>&#x6839;&#x636E;&#x9879;&#x76EE;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x5236;&#x5B9A;&#x7B56;&#x7565;&#xFF0C;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x4FDD;&#x6301;&#x6784;&#x5EFA;&#x7684;&#x5929;&#x6570; 10</li>
+<li>&#x4FDD;&#x6301;&#x6784;&#x5EFA;&#x7684;&#x6700;&#x5927;&#x4E2A;&#x6570; 30</li>
+</ul>
+<p>&#x6279;&#x91CF;&#x914D;&#x7F6E;Discard old builds&#x9009;&#x9879;</p>
+<ol>
+<li><p>&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x4E86;&#x5F88;&#x591A;Jenkins job&#xFF0C;&#x9010;&#x4E2A;&#x6765;&#x4FEE;&#x6539;Discard old builds&#xFF0C;&#x975E;&#x5E38;&#x8D39;&#x65F6;&#x8D39;&#x529B;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="https://wiki.jenkins.io/display/JENKINS/Configuration+Slicing+Plugin" target="_blank">Configuration Slicing plugin</a> &#x63D2;&#x4EF6;&#x8FDB;&#x884C;&#x6279;&#x91CF;&#x914D;&#x7F6E;&#x3002;</p>
+</li>
+<li><p>&#x6279;&#x91CF;&#x914D;&#x7F6E;&#x6B65;&#x9AA4;</p>
+<p>Manage Jenkins -&gt; Configuration Slicing</p>
+<p>&#x5206;&#x522B;&#x6253;&#x5F00;&#x4EE5;&#x4E0B;&#x83DC;&#x5355;&#xFF0C;&#x5728;&#x5DE6;&#x8FB9;&#x7684;&#x201C;Configured Value&#x201D;&#x4E2D;&#x586B;&#x5165;&#x65B0;&#x7684;&#x503C; </p>
+<ul>
+<li>Discard Old Builds Slicer - Days to keep artifacts</li>
+<li>Discard Old Builds Slicer - Days to keep builds</li>
+<li>Discard Old Builds Slicer - Max # of builds to keep</li>
+<li>Discard Old Builds Slicer - Max # of builds to keep with artifacts</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h4 id="214-&#x63D2;&#x4EF6;&#x6E05;&#x7406;">2.1.4 &#x63D2;&#x4EF6;&#x6E05;&#x7406;</h4>
+<p><a href="https://wiki.jenkins.io/display/JENKINS/Workspace+Cleanup+Plugin" target="_blank">Workspace+Cleanup+Plugin</a></p>
+<p><strong>&#x6784;&#x5EFA;&#x524D;&#x6E05;&#x7406;</strong></p>
+<p>Build Environment -&gt; Delete workspace before build starts</p>
+<p><strong>&#x6784;&#x5EFA;&#x540E;&#x6E05;&#x7406;</strong></p>
+<p>Post-build Actions -&gt; Delete workspace when build is done</p>
+<h4 id="215-&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;">2.1.5 &#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</h4>
+<p>&#x914D;&#x7F6E;&#x5DE5;&#x7A0B;&#xFF08;&#x5DE5;&#x7A0B;&#x540D;&#x4E3A; <code>doWripOutWorkspace</code>&#xFF0C;&#x53C2;&#x6570;&#x4E3A;<code>projectName</code>&#xFF09;&#xFF0C;&#x6E05;&#x7406;Jenkins&#x4E2D;&#x5236;&#x5B9A;&#x5DE5;&#x7A0B;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</p>
+<pre><code class="lang-groovy"><span class="hljs-keyword">import</span> hudson.model.*
+<span class="hljs-keyword">import</span> jenkins.model.Jenkins
+
+projectName = Jenkins.instance.getItem(<span class="hljs-string">&apos;doWripOutWorkspace&apos;</span>).getLastBuild().getBuildVariables().get(<span class="hljs-string">&apos;projectName&apos;</span>)
+<span class="hljs-comment">// For each project</span>
+<span class="hljs-keyword">for</span>(item <span class="hljs-keyword">in</span> Hudson.instance.items) {
+    jobName = item.getFullDisplayName()
+    <span class="hljs-keyword">if</span> (jobName == projectName) {
+        customWorkspace = item.getCustomWorkspace()
+        <span class="hljs-keyword">for</span> (node <span class="hljs-keyword">in</span> Hudson.getInstance().getNodes()) {
+            workspacePath = node.getWorkspaceFor(item)
+            <span class="hljs-keyword">if</span> (workspacePath == <span class="hljs-literal">null</span>) {
+                println(<span class="hljs-string">&quot;Warning: Can&apos;t get workspace path!&quot;</span>)
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">if</span> (customWorkspace != <span class="hljs-literal">null</span>) {
+                    workspacePath = node.getRootPath().child(customWorkspace)
+                }
+
+                <span class="hljs-keyword">if</span> (workspacePath.exists()) {
+                    workspacePath.deleteRecursive()
+                    println(<span class="hljs-string">&quot;Node: &quot;</span> + node.getDisplayName())
+                    println(<span class="hljs-string">&quot;Deleted from location &quot;</span> + workspacePath.getRemote())
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<h4 id="216-&#x6E05;&#x7406;&#x5DE5;&#x7A0B;&#x5DF2;&#x7ECF;&#x5220;&#x9664;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;">2.1.6 &#x6E05;&#x7406;&#x5DE5;&#x7A0B;&#x5DF2;&#x7ECF;&#x5220;&#x9664;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</h4>
+<p>&#x76F4;&#x63A5;&#x5220;&#x9664;Jenkins Job&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x5148;<strong>&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;</strong>&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x5BFC;&#x81F4;&#x6709;&#x4E9B;&#x88AB;&#x5220;&#x9664;&#x7684;Jenkins Job&#x539F;&#x6765;&#x7684;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#xFF0C;&#x5BFC;&#x81F4;&#x65E0;&#x7528;&#x6570;&#x636E;&#x5360;&#x7528;&#x78C1;&#x76D8;&#xFF0C;&#x9700;&#x8981;&#x6E05;&#x7406;&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528; jenkinsapi</strong></p>
+<blockquote>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="jenkinsapi.html">jenkinsapi</a></p>
+<p>&#x6765;&#x81EA;&#xFF1A;<a href="https://my.oschina.net/donhui/blog/677935" target="_blank">&#x5220;&#x9664;Jenkins JOB&#x540E;&#x6E05;&#x7406;workspace</a></p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> shutil
+<span class="hljs-keyword">import</span> logging
+
+<span class="hljs-keyword">from</span> jenkinsapi.jenkins <span class="hljs-keyword">import</span> Jenkins
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__file__)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_jenkins_instance</span><span class="hljs-params">()</span>:</span>
+    jenkins_url = <span class="hljs-string">&quot;http://jenkins.example.com&quot;</span>
+    jenkins_username = <span class="hljs-string">&quot;username&quot;</span>
+    jenkins_password = <span class="hljs-string">&quot;password&quot;</span>
+    <span class="hljs-keyword">return</span> Jenkins(jenkins_url, username=jenkins_username, password=jenkins_password)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clean_workspace</span><span class="hljs-params">()</span>:</span>
+    jenkins_instance = get_jenkins_instance()
+
+    jenkins_workspace_path = <span class="hljs-string">&quot;/opt/JENKINS_HOME/workspace/&quot;</span>
+
+    <span class="hljs-keyword">for</span> dirpath, dirnames, filenames <span class="hljs-keyword">in</span> os.walk(jenkins_workspace_path):
+        <span class="hljs-keyword">if</span> dirpath == jenkins_workspace_path:
+            <span class="hljs-keyword">for</span> dirname <span class="hljs-keyword">in</span> dirnames:
+                jenkins_job_name = dirname
+                <span class="hljs-comment"># &#x5982;&#x679C;job&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x5219;&#x6E05;&#x7406;&#x76F8;&#x5E94;&#x7684;workspace</span>
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> jenkins_instance.has_job(jenkins_job_name):
+                    logger.info(<span class="hljs-string">&quot;removing workspace dir of job:%s&quot;</span> % dirname)
+                    shutil.rmtree(os.path.join(dirpath, dirname))
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    clean_workspace()
+</code></pre>
+<h2 id="&#x66F4;&#x65B0;&#x8BB0;&#x5F55;">&#x66F4;&#x65B0;&#x8BB0;&#x5F55;</h2>
+<pre><code>2019.02.24: &#x521D;&#x6B65;&#x6574;&#x7406;&#xFF0C;&#x589E;&#x52A0;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x3001;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x3002;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="jenkins-variable.html" class="navigation navigation-prev " aria-label="Previous page: Jenkins 获取字符串变量">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Coverity/" class="navigation navigation-next " aria-label="Next page: Coverity">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Jenkins 清理空间","level":"1.3.5.1.4","depth":4,"next":{"title":"Coverity","level":"1.3.5.2","depth":3,"path":"Section2/CongratulationIntegration/Coverity/README.md","ref":"Section2/CongratulationIntegration/Coverity/README.md","articles":[{"title":"Coverity 平台安装","level":"1.3.5.2.1","depth":4,"path":"Section2/CongratulationIntegration/Coverity/coverity-platform-install.md","ref":"Section2/CongratulationIntegration/Coverity/coverity-platform-install.md","articles":[]}]},"previous":{"title":"Jenkins 获取字符串变量","level":"1.3.5.1.3","depth":4,"path":"Section2/CongratulationIntegration/Jenkins/jenkins-variable.md","ref":"Section2/CongratulationIntegration/Jenkins/jenkins-variable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Section2/CongratulationIntegration/Jenkins/jenkins-clean-space.md","mtime":"2019-02-24T16:39:56.886Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-24T16:47:02.436Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
