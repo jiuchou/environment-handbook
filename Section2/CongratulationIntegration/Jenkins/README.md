@@ -362,10 +362,7 @@ API Token的查看方式为
 使用openID登录jenkins -> 点击右上角用户名，进入用户个人页面 -> 点击左边的设置，打开设置页面 -> API Token（创建时显示后保存，之后无法查看，如果忘记需要重新设置）
 
 
-
-注意点：
-
-1.CSRF Protection
+#### 4.1.1.CSRF Protection
 
 > 如果CSRF开启，需使用crumb，否则会出现报错：`Error 403 No valid crumb was included in the request`
 
@@ -381,33 +378,41 @@ wget -q --auth-no-challenge --user USERNAME --password PASSWORD --output-documen
 
 This will print something like ".crumb:1234abcd", which you should add to the subsequent request.
 
-解决方案实例：
+##### 解决方案实例：
 
 * 参考：
   * https://stackoverflow.com/questions/23497819/trigger-parameterized-build-with-curl-and-crumb
   * https://stackoverflow.com/questions/38137760/jenkins-rest-api-create-job
 
-方案1（未验证）：
+方案1：
 
-**obtain crumb** $ `wget -q --auth-no-challenge --user USERNAME --password PASSWORD --output-document - 'http://myJenkins:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'`
+**obtain crumb** $ `wget -q --auth-no-challenge --user USERNAME --password PASSWORD --output-document - 'JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'`
 
-**Now Run Jenkins Job** $ `curl -I -X POST http://USERNAME:PASSWORD@localhost:8080/job/JOBName/build -H "Jenkins-Crumb:44e7038af70da95a47403c3bed5q10f8"`
+**Now Run Jenkins Job** $ `curl -I -X POST http://USERNAME:PASSWORD@JENKINS_URL/job/JOBName/build -H "Jenkins-Crumb:44e7038af70da95a47403c3bed5q10f8"`
 
-方案2（未验证）：
-
-```bash
-JENKINS_URL=http://localhost:8080
-CRUMB=$(curl --user $USERNAME:$APITOKEN \
-        $JENKINS_URL/crumbIssuer/api/xml?xpath=concat\(//crumbRequestField,%22:%22,//crumb\))
-curl --user $USERNAME:$APITOKEN -H "$CRUMB" -d "script=$GROOVYSCRIPT" $JENKINS_URL/script
-```
-
-方案3（未验证）：
+方案2：
 
 ```bash
-CRUMB=$(curl -s 'http://USER:TOKEN@localhost:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
-curl -X POST -H "$CRUMB" "http://USERNAME:APITOKEN@localhost:8080/createItem?name=NewJob"
+CRUMB=$(curl --user USERNAME:PASSWORD 'JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
+curl --user USERNAME:PASSWORD -H "$CRUMB" -d "script=$GROOVYSCRIPT" JENKINS_URL/script
 ```
+
+方案3：
+
+```bash
+CRUMB=$(curl -s 'http://USERNAME:APITOKEN@JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
+curl -X POST -H "$CRUMB" "http://USERNAME:APITOKEN@JENKINS_URL/createItem?name=NewJob"
+```
+
+##### 问题记录说明
+
+1.获取 `Jenkins-Crumb` 失败
+
+**现象** 无返回值或返回错误信息
+
+**原因** 网络受限制，日常使用过程中机器添加了代理导致
+
+**解决方案** 使用 `unset http_proxy https_proxy` 取消代理
 
 ### 4.2 Python使用Jenkins REST API  
 
