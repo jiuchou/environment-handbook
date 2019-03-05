@@ -47,5 +47,6 @@
         * [Coverity](Section2/CongratulationIntegration/Coverity/README.md)
             * [Coverity 平台安装](Section2/CongratulationIntegration/Coverity/coverity-platform-install.md)
     * [附录A 机器异常](Section2/AppendixA/README.md)
+* [Section Three: 待整理](Section3/prepareReport.md)
 * [附录 计算机概念](AppendixConception/compuword.md)
 

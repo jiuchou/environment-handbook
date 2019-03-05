@@ -31,3 +31,6 @@ hard code是指“硬编码”，即将数据直接写在代码（程序）中�
 ## 3 数据进制
 
 * [在线进制转换](http://tool.oschina.net/hexconvert/)
+
+## 4 REPL
+REPL(Read-eval-print-loop)：交互式解析器
