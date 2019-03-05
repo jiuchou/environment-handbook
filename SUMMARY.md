@@ -33,6 +33,7 @@
         * [set](Section2/Shell/set/README.md)
             * [set -o errexit, set -o pipefail与set -o nounset](Section2/Shell/set/shell-set-fail-exit.md)
         * [Linux 文件编码](Section2/Shell/linux-file-encoding.md)
+        * [Linux 返回值](Section2/Shell/linux-return-code.md)
     * [数据库](Section2/Database/README.md)
         * [MySQL](Section2/Database/MySQL.md)
     * [版本控制工具](Section2/VersionControl/README.md)
