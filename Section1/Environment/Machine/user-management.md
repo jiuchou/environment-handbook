@@ -248,6 +248,14 @@ auth requiredpam_whell.so use_uid
 
 ## 5 扩展
 
+### 修改UID、GID
+
+```bash
+# 分别修改docker用户、用户组的UID、GID
+usermod -u 999 docker
+groupmod -g 999 docker
+```
+
 
 
 ## 更新记录
