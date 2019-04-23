@@ -1,10 +1,4 @@
 # 前言
 
-主要包含Windows/Linux平台通用技术。
-
-## 1 涉及内容
-
-### 1.1 命令行及脚本(cmd and bat/shell)
-
-
+* [如何编写开源项目的 README 文档](https://blog.coding.net/blog/how-to-make-readme)
 

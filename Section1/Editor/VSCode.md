@@ -70,7 +70,6 @@ Visual Studio Code (简称 VS Code / VSC) 是一款免费开源的现代化轻�
 > ![](image/open-vscode-setting.png)
 
 
-
 ## 2 插件
 
 ### 2.1 插件安装
@@ -111,46 +110,113 @@ Window下进入cmd，执行`code --install-extension [test.vsix]`
 
 ### 3.2 Vue插件
 
+* 参考: 
+
+  * [如何优雅地使用 VSCode 来编辑 vue 文件](https://www.clarencep.com/2017/03/18/edit-vue-file-via-vscode)
+
+  * [visual studio code 配置vue开发环境](https://segmentfault.com/a/1190000014785115)
+
 #### 3.2.1 Vetur
 
-* 参考: [如何优雅地使用 VSCode 来编辑 vue 文件](https://www.clarencep.com/2017/03/18/edit-vue-file-via-vscode)
+> 插件安装方式参考[2.1 插件安装](### 2.1 插件安装)
 
-1. 安装 Vetur 插件
+1. 功能
 
-安装方式参考[2.1 插件安装](### 2.1 插件安装)
+​	高亮.vue文件，附带有格式化功能，配合Eslint插件对代码进行格式化检查
 
-1. 安装eslint
+2. 配置
 
-```cmd
-npm install -g eslint
-npm install -g eslint-plugin-html
-```
+   ```json
+   {
+       // 支持vue文件的基本语法高亮
+       "emmet.syntaxProfiles": {
+           "vue-html": "html",
+           "vue": "html"
+       }
+   }
+   ```
 
-1. 配置
+#### 3.2.2 Eslint
 
-```
-{
-    // 支持vue文件的基本语法高亮
-    "emmet.syntaxProfiles": {
-        "vue-html": "html",
-        "vue": "html"
-    },
-    // 配置ESLint
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "html",
-        "vue"
-    ],
-    "eslint.options": {
-        "plugins": ["html"]
-    }
-}
-```
+> 插件安装方式参考[2.1 插件安装](### 2.1 插件安装)
 
-### 3.2.2 Eslint
+1. 功能
 
-### 3.2.3 Prettier - Code formatter
+   检查js、html、css代码规范，保持代码风格一致性，强制性规则
+
+2. 使用
+
+   想让插件生效，需要做相应的配置。
+
+   `vue-cli` 生成的项目自带 `eslint` 配置，可直接使用，无需修改规则。在使用 `vue-cli` 生成 `webpack` 项目时，选择 [Standard](https://github.com/standard/standard/blob/master/docs/README-zhcn.md) 规范时，会自动在项目根目录下生成 `.eslintignore` 和 `.eslintrc.js` 两个配置文件。
+
+3. 项目依赖
+
+   ```bash
+   npm install --save-dev eslint-plugin-html
+   ```
+
+   ```json
+       "eslint": "^5.15.3",
+       "eslint-config-standard": "^12.0.0",
+       "eslint-friendly-formatter": "^4.0.1",
+       "eslint-loader": "^2.1.2",
+       "eslint-plugin-html": "^5.0.3",
+       "eslint-plugin-import": "^2.16.0",
+       "eslint-plugin-node": "^8.0.1",
+       "eslint-plugin-promise": "^4.0.1",
+       "eslint-plugin-standard": "^4.0.0",
+       "eslint-plugin-vue": "^5.2.2",
+   ```
+
+4. vscode 首选项配置
+
+   ```json
+   {
+       // 配置ESLint
+       "eslint.options": {
+           "plugins": ["html"]
+       }
+   }
+   ```
+
+5. **扩展1: vscode eslint-plugin-vue 自动修复 eslint 报错**
+
+   **安装插件**
+
+   ```bash
+   npm install -g eslint-plugin-vue
+   ```
+
+   **修改项目根目录下的文件： .eslintrc.js**
+
+   ```js
+   plugins: [
+       // 增加 vue
+       'vue',
+       'html'
+   ]
+   ```
+
+   **修改 vscode 首选项配置**
+
+   ```json
+   {
+       // 自动修复 eslint 报错
+       "eslint.autoFixOnSave": true,
+       "eslint.validate": [
+           "javascript",{
+               "language": "vue",
+               "autoFix": true
+           },"html",
+           "vue"
+       ],
+       // 保存时自动格式化
+       "editor.formatOnSave": true
+   }
+   ```
+
+#### 3.2.3 Prettier - Code formatter
 
 * [vscode + prettier 专治代码洁癖](https://blog.csdn.net/anxin_wang/article/details/81234214)
 
@@ -316,7 +382,15 @@ pylint是VScode中python自带的插件，可以帮助代码规范，美观。
 
 自动生成目录
 
-## 4 扩展
+## 4 vscode 首选项配置（完整）
+
+```json
+
+```
+
+
+
+## 5 扩展
 
 * [强大的 VS Code](https://www.imooc.com/article/39349)
 * [vscode 配置 python3开发环境](https://blog.csdn.net/weixin_40528417/article/details/81141567)

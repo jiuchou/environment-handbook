@@ -1,8 +1,10 @@
 # 数据库
 
-## 通用命令
+## 1 通用命令
 
 > 所有常用命令参考: [SQL 教程 W3school](http://www.w3school.com.cn/sql/index.asp)
+
+### 1.1 基本操作
 
 #### 创建数据库 Create Database
 
@@ -39,8 +41,6 @@ CREATE DATABASE database_name DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci
 DROP DATABASE database_name
 ```
 
-
-
 #### 增加数据 INSERT INTO
 
 INSERT INTO 语句用于向表格中插入新的行。
@@ -48,14 +48,11 @@ INSERT INTO 语句用于向表格中插入新的行。
 ##### 语法
 ```sql
 INSERT INTO 表名称 VALUES (值1, 值2,....)
-```
-
-```sql
 INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
 ```
 
-```sql
 ##### 使用
+```sql
 语法
 
 我们也可以指定所要插入数据的列：
@@ -70,13 +67,61 @@ desc table_name;
 select * from table_name\G;
 
 # 增加数据
-insert 
+insert into table_name(id, name) values(1, 'jiuchou');
 
 # 删除数据
 delete from table_name where 列名 = value;
 
 # 更新数据
 update table_name set 列名1 = value, 列名2 = value where 列名 = value;
+```
+
+### 1.2 元素操作
+
+**修改列名**
+
+```sql
+-- change table column name
+-- ALTER TABLE table_name CHANGE column_name_old column_name_new VARCHAR(1024) null;
+-- ALTER TABLE table_name CHANGE column_name_old column_name_new VARCHAR(1024) null;
+```
+
+**增加列信息**
+
+```sql
+ALTER TABLE table_name ADD COLUMN column_name VARCHAR(128);  
+```
+
+**删除列信息**
+
+```sql
+ALTER TABLE table_name DROP COLUMN column_name;
+```
+
+**修改列信息**
+
+```sql
+-- modify table column properties
+-- ALTER TABLE table_name MODIFY column column_name VARCHAR(1024) NULL COMMENT '描述信息';
+-- ALTER TABLE table_name MODIFY column column_name VARCHAR(256) NULL COMMENT '描述信息';
+```
+
+**字段内容不允许重复**
+
+* 定义不重复列
+```sql
+column_name varchar(256) UNIQUE NOT NULL COMMENT '描述信息',
+```
+
+* 设置字段内容不允许重复
+```sql
+-- avalon是数据库名，Users是表名，username是字段名
+ALTER TABLE avalon.Users ADD UNIQUE (username);  
+```
+
+* 取消字段内容不允许重复的设置
+```sql
+ALTER TABLE table_name DROP INDEX column_name;
 ```
 
 ## 复杂命令
