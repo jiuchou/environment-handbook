@@ -63,6 +63,7 @@
     * [编程规范](Section3/programming-style-guide.md)
     * [Python](Section3/Python/README.md)
         * [Django框架](Section3/Python/django-framework.md)
+    * [JavaScript](Section3/JavaScript/README.md)
 * [附录 计算机概念](AppendixConception/compuword.md)
     * [常用单词](AppendixConception/usually-word.md)
     * [拓展相关](AppendixConception/it-extend.md)
