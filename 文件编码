@@ -30,5 +30,37 @@ vim filename -c "e ++enc=GBK"
 iconv -f GBK -t UTF-8 待转码文件名 -o 输出文件名
 ```
 
+## Python处理编码
+
+> 扩展
+>   使用chardet检查字符串编码
+>   https://chardet.readthedocs.io/en/latest/index.html
+
+在Python2.7脚本中，读取编码为 `iso-8859-1` 且包含中文内容的文件时，通过chardet获取字符串编码内容如下
+```python
+import chardet
+f = open(filename, 'r')
+output = f.read()
+print chardet(outpt)
+# {'confidence': 0.6466081639234461, 'language': '', 'encoding': 'ISO-8859-1'}
+```
+可使用如下方式将字符串内容转为utf-8编码后正常显示
+```python
+output_1 = output.decode("gbk", 'ignore').encode('utf8')
+print output_1
+print chardet(output_1)
+# {'confidence': 0.40148270516097284, 'language': 'Turkish', 'encoding': 'Windows-1254'}
+```
+
+在Python2.7命令行中，读取编码为 `iso-8859-1` 且包含中文内容的文件时，通过chardet获取字符串编码内容如下
+```
+{'confidence': 0.6159047963522948, 'encoding': 'ISO-8859-2'}
+```
+可使用如下方式将字符串内容转为utf-8编码后正常显示
+```python
+>>> o1 = output.decode("gbk", 'ignore').encode('utf8')
+>>> print o1
+```
+
 
 
