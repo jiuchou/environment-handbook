@@ -1,0 +1,34 @@
+
+## vim显示中文乱码解决方法
+
+### 配置vim配置 `~/.vimrc` 或 `/etc/vim/vimrc`
+
+在使用vim打开file类型为 `ISO-8859 text` 的文件时，里面的中文是乱码，这是因为vim不能自动识别文件的编码类型，需要修改vim的配置，可以修改/etc/vim/vimrc，也可以修改~/.vimrc。
+我只对当前用户生效，所以修改后者，加入如下内容：
+```
+# 参考 http://blog.chinaunix.net/uid-14753126-id-2981712.html
+set fencs=utf-8,GB18030,ucs-bom,default,latin1
+```
+或者加入以下内容
+```
+# 参考 https://blog.csdn.net/z1134145881/article/details/46832685
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+set fileformats=unix
+set encoding=prc
+```
+
+### vim打开对应编码格式文件
+```bash
+# 参考 http://www.cnblogs.com/sparkbj/p/6212427.html
+vim filename -c "e ++enc=GBK"
+```
+
+### 使用iconv
+```bash
+# iconv -f GBK 待转码文件名 -o 输出文件名
+iconv -f GBK -t UTF-8 待转码文件名 -o 输出文件名
+```
+
+
+
