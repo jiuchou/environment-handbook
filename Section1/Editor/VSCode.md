@@ -13,7 +13,7 @@
   - [3 常用插件介绍](#3-%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D)
     - [3.1 中英文切换](#31-%E4%B8%AD%E8%8B%B1%E6%96%87%E5%88%87%E6%8D%A2)
       - [3.1.1 Chinese (Simplified) Language Pack for Visual Studio Code](#311-chinese-simplified-language-pack-for-visual-studio-code)
-    - [3.2 Vue插件](#32-vue%E6%8F%92%E4%BB%B6)
+      - [3.2 Vue插件](#32-vue%E6%8F%92%E4%BB%B6)
       - [3.2.1 Vetur](#321-vetur)
     - [3.2.2 Eslint](#322-eslint)
     - [3.2.3 Prettier - Code formatter](#323-prettier---code-formatter)
@@ -226,6 +226,45 @@ Window下进入cmd，执行`code --install-extension [test.vsix]`
 
 1. 配置
 
+#### 3.2.4 记录
+
+* vscode自动解决Eslint问题
+  * [vscode保存代码，自动按照eslint规范格式化代码设置](https://blog.csdn.net/hdchangchang/article/details/82233740)
+  * [VScode eslint-plugin-vue 自动修复eslint报错](https://www.cnblogs.com/mengfangui/p/9516578.html)
+  * [vscode代码保存时自动格式化成ESLint风格（支持VUE）](https://www.jianshu.com/p/68dbca4a9a11)
+
+```json
+{
+  "files.associations": {
+      "*.vue": "vue"
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.options": {
+      "extensions": [
+          ".js",
+          ".vue"
+      ]
+  },
+"eslint.validate": [
+    "javascript",{
+        "language": "vue",
+        "autoFix": true
+    },"html",
+    "vue"
+],
+  "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/dist": true
+  },
+  "emmet.syntaxProfiles": {
+      "javascript": "jsx",
+      "vue": "html",
+      "vue-html": "html"
+  },
+}
+```
+
 ### 3.3 Python插件
 
 > 参考
@@ -264,7 +303,7 @@ pylint是VScode中python自带的插件，可以帮助代码规范，美观。
 
 > pylint检查的有些报错是我们不想看到的，可以选择性的忽略。
 
-##### [pylint] Constant name "urlpatterns" doesn't conform to UPPER_CASE naming style [C0103]
+**[pylint] Constant name "urlpatterns" doesn't conform to UPPER_CASE naming style [C0103]**
 
 配置setting.json
 
@@ -276,7 +315,7 @@ pylint是VScode中python自带的插件，可以帮助代码规范，美观。
 }
 ```
 
-#####  [pylint] Unable to import 'xxx.xxx.xxx' [E0401]
+**[pylint] Unable to import 'xxx.xxx.xxx' [E0401]**
 
 配置setting.json
 
@@ -290,11 +329,11 @@ pylint是VScode中python自带的插件，可以帮助代码规范，美观。
 }
 ```
 
-#####  [pylint] Module 'xxx' has no 'xxx' member' [E1101]
+**[pylint] Module 'xxx' has no 'xxx' member' [E1101]**
 
    原因:  Pylint默认只信任来自标准库stdlib的C扩展，而忽略其他的。模块'xxx'不是stdlib的一部分，需要手动将其添加到白名单。
 
-###### 解决方案1(待验证)
+* 解决方案1(待验证)
 
    1. 在terminal里 （例如Windows 平台的powershell）导航到项目所在目录；
 
@@ -315,7 +354,7 @@ pylint是VScode中python自带的插件，可以帮助代码规范，美观。
    extension-pkg-whitelist=lxml
    ```
 
-###### 解决方案2(待验证)
+* 解决方案2(待验证)
 
    配置setting.json
 

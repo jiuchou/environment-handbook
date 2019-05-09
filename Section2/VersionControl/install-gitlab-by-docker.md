@@ -10,12 +10,12 @@
         - [1.3 GitLab 对接 LDAP 用户认证](#13-gitlab-对接-ldap-用户认证)
     - [2 GitLab 相关](#2-gitlab-相关)
         - [2.1 查询 GitLab 版本](#21-查询-gitlab-版本)
-        - [3 GitLab 数据迁移](#3-gitlab-数据迁移)
-            - [3.1 GitLab](#31-gitlab)
-            - [3.2 失败问题](#32-失败问题)
-                - [1. 启动失败](#1-启动失败)
-                - [2. GitLab服务启动成功后，使用SSH协议连接仓库失败问题](#2-gitlab服务启动成功后使用ssh协议连接仓库失败问题)
-    - [更新记录](#更新记录)
+    - [3 GitLab 数据迁移](#3-gitlab-数据迁移)
+        - [3.1 GitLab 数据迁移方式](#31-gitlab-数据迁移方式)
+        - [3.2 失败问题](#32-失败问题)
+            - [3.2.1 启动失败](#321-启动失败)
+            - [3.2.2 SSH协议连接仓库失败](#322-ssh协议连接仓库失败)
+    - [4 更新记录](#4-更新记录)
 
 <!-- /TOC -->
 
@@ -166,7 +166,7 @@ docker restart gitlab
 
 进行 `GitLab` 数据迁移重新启动 `GitLab` 服务后，使用SSH协议连接仓库失败
 
-```bash
+```
 root@ubuntu:~# git clone ssh://git@127.0.0.1:10022/USERNAME/repositry.git
 Cloning into 'repositry'...
 Read from socket failed: Connection reset by peer

@@ -1,17 +1,23 @@
 # JavaScript
-<!-- TOC -->
 
-- [JavaScript](#javascript)
-    - [第一部分 Vue](#第一部分-vue)
-        - [1 网页标题栏添加favicon.ico图标](#1-网页标题栏添加faviconico图标)
-            - [1.1 favicon.ico图标文件制作](#11-faviconico图标文件制作)
-            - [1.2 favicon.ico图标不显示](#12-faviconico图标不显示)
-                - [1.2.1 部署问题](#121-部署问题)
-                - [1.2.2 缓存问题](#122-缓存问题)
-                - [1.2.3 路径错误](#123-路径错误)
 
-<!-- /TOC -->
-## 第一部分 Vue
+## 第一部分 样式
+
+### 0 扉页
+
+* 字体
+  * [如何优雅的选择字体(font-family)](https://segmentfault.com/a/1190000006110417)
+* 布局
+
+  * 经典布局网站： https://adminlte.io/
+  * 页面布局的几点建议，来自vue-element-admin： https://github.com/PanJiaChen/vue-element-admin/issues/1085
+  * CSS Grid 系列(上)-Grid布局完整指南： https://segmentfault.com/a/1190000012889793
+* ECMAScript
+  * [ES6 基础](https://www.cnblogs.com/libin-1/p/6716470.html)
+* Webpack 构建
+  * webpack 升级: https://blog.csdn.net/qq_25243451/article/details/80331269
+  * webpack4 入门: https://blog.csdn.net/MessageBox_/article/details/81325034
+  * https://blog.csdn.net/qq_27184497/article/details/84592953
 
 ### 1 网页标题栏添加favicon.ico图标
 

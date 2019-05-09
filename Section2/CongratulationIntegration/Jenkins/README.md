@@ -173,38 +173,46 @@ drwxr-xr-x. 21 system_u:object_r:var_t:s0       root    root    4096
 
 1. 下载 `jenkins-2.176.zip` 安装包，解压得到 `jenkins.exe`，双击按照如下步骤安装
 
-![](image/install-jenkins-windows-1.png)
+    ![](image/install-jenkins-windows-1.png)
 
-![](image/install-jenkins-windows-2.png)
+    ![](image/install-jenkins-windows-2.png)
 
-![](image/install-jenkins-windows-3.png)
+    ![](image/install-jenkins-windows-3.png)
 
-![](image/install-jenkins-windows-4.png)
+    ![](image/install-jenkins-windows-4.png)
 
-![](image/install-jenkins-windows-5.png)
+    ![](image/install-jenkins-windows-5.png)
 
 2. 安装完成后自动打开浏览器访问 `http://localhost:8080/login?from=%2F`
-![](image/install-jenkins-windows-6.png)
+
+    ![](image/install-jenkins-windows-6.png)
 
 3. 将 `D:\Develop\Jenkins\secrets\initialAdminPassword` 文件中内容输入到上图后，点击 `Continue` 按钮
 4. 初始化插件安装方式，可选择 `Install suggested plugins` 和 `Select plugins to install` 两种模式，根据需求自行选择（本文基于 `Install suggested plugins` 演示）
-![](image/install-jenkins-windows-7.png)
+
+    ![](image/install-jenkins-windows-7.png)
 
 5. 进入默认推荐插件安装界面
-![](image/install-jenkins-windows-8.png)
+
+    ![](image/install-jenkins-windows-8.png)
 
 6. 安装完成，进入创建管理员用户界面，可选择 `Continue as admin` 和 `Save and Continue`（本文基于 `Save and Continue` 演示）
-![](image/install-jenkins-windows-9.png)
-![](image/install-jenkins-windows-10.png)
+
+    ![](image/install-jenkins-windows-9.png)
+
+    ![](image/install-jenkins-windows-10.png)
 
 7. 配置服务器域名地址（本文基于默认配置 `http://localhost:8080/` 演示）
-![](image/install-jenkins-windows-11.png)
+
+    ![](image/install-jenkins-windows-11.png)
 
 8. 安装完成，点击 `Start using Jenkins`，进入Jenkins平台服务页面
-![](image/install-jenkins-windows-12.png)
+
+    ![](image/install-jenkins-windows-12.png)
 
 9. Jenkins平台服务初始页面
-![](image/install-jenkins-windows-13.png)
+
+    ![](image/install-jenkins-windows-13.png)
 
 ## 2 Jenkins Cli
 
@@ -502,11 +510,24 @@ java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -remoting -s http://loca
 coverity插件
 
 ```
-官网地址: https://plugins.jenkins.io/synopsys-coverity
+官网地址: 
+仓库地址: https://plugins.jenkins.io/synopsys-coverity
+功能: 
+说明: 
+```
+
+3.2.9 日志相关插件
+
+log-parser-plugin
+
+```
+官网地址: https://wiki.jenkins.io/display/JENKINS/Log+Parser+Plugin
 仓库地址: 
 功能: 
 说明: 
 ```
+
+
 
 ## 4 API调用
 
@@ -599,7 +620,13 @@ BusyBox v1.2.8.4 (2018-07-17 15:21:40 UTC)
 
 2.Python 使用Jenkins Rest API 之 [jenkinsapi](jenkinsapi.md)
 
-## 5 更新记录
+## 5 可借鉴整理
+
+* [使用 Jenkins 执行持续集成的几个实用经验分享](https://blog.csdn.net/aixiaoyang168/article/details/80636544)
+
+* Jenkins-cli 自动化构建工具（1）https://www.jianshu.com/p/45f010d63ff3
+
+## 6 更新记录
 
 ```
 2019.02.13: 完成初稿，包含Jenkins服务器安装概述、主流插件概述、Jenkins API等内容

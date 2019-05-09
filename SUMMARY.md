@@ -60,8 +60,10 @@
     * [附录A 机器异常](Section2/AppendixA/README.md)
 * [Section Three: 待整理](Section3/prepareReport.md)
     * [待整理1](Section3/prepareReport_1.md)
+    * [谨慎使用format格式化](Section3/careful-with-str-format.rst)
     * [文件编码](Section3/fileencoding.md)
     * [编程规范](Section3/programming-style-guide.md)
+    * [C](Section3/C/README.md)
     * [Python](Section3/Python/README.md)
         * [Django框架](Section3/Python/django-framework.md)
     * [JavaScript](Section3/JavaScript/README.md)
@@ -78,4 +80,5 @@
 * [附录 计算机概念](AppendixConception/compuword.md)
     * [常用单词](AppendixConception/usually-word.md)
     * [拓展相关](AppendixConception/it-extend.md)
+    * [开源相关](AppendixConception/opensource.md)
 
