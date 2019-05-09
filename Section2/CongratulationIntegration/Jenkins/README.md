@@ -1,5 +1,41 @@
 # Jenkins
 
+<!-- TOC -->
+
+- [Jenkins](#jenkins)
+    - [1 Installing Jenkins](#1-installing-jenkins)
+        - [1.1 物理机/虚拟机](#11-物理机虚拟机)
+        - [1.2 Docker](#12-docker)
+            - [1.2.1 使用 jenkins/jenkins 镜像](#121-使用-jenkinsjenkins-镜像)
+            - [1.2.2 使用 jenkinsci/blueocean 镜像](#122-使用-jenkinsciblueocean-镜像)
+            - [1.2.3 问题记录](#123-问题记录)
+        - [1.3 Windows](#13-windows)
+            - [1.3.1 Windows安装Jenkins平台服务](#131-windows安装jenkins平台服务)
+            - [1.3.2 详细安装步骤说明](#132-详细安装步骤说明)
+    - [2 Jenkins Cli](#2-jenkins-cli)
+    - [3 Jenkins Plugin](#3-jenkins-plugin)
+        - [3.1 插件安装](#31-插件安装)
+        - [3.2 插件说明（Comonly Used Plugins）](#32-插件说明comonly-used-plugins)
+            - [3.2.1 用户认证鉴权](#321-用户认证鉴权)
+                - [3.2.1.1 ldap](#3211-ldap)
+                - [3.2.1.2 role-strategy](#3212-role-strategy)
+            - [3.2.2 视图](#322-视图)
+            - [3.2.3 节点](#323-节点)
+            - [3.2.4 配置管理（SCM）](#324-配置管理scm)
+            - [3.2.5 易用性工具插件](#325-易用性工具插件)
+            - [3.2.6 其他主流插件](#326-其他主流插件)
+            - [3.2.7 Docker插件](#327-docker插件)
+            - [3.2.8 Coverity插件](#328-coverity插件)
+    - [4 API调用](#4-api调用)
+        - [4.1 使用 Linux curl 调用API](#41-使用-linux-curl-调用api)
+            - [4.1.1 CSRF Protection](#411-csrf-protection)
+                - [解决方案实例：](#解决方案实例)
+                - [问题记录说明](#问题记录说明)
+        - [4.2 Python使用Jenkins REST API](#42-python使用jenkins-rest-api)
+    - [5 更新记录](#5-更新记录)
+
+<!-- /TOC -->
+
 > 本文内容Jenkins服务器基于 jenkinsci/blueocean 镜像搭建。
 >
 > Jenkins版本: 2.150.1
@@ -120,6 +156,54 @@ drwxr-xr-x. 13 system_u:object_r:svirt_sandbox_file_t:s0 jenkins jenkins 4096 De
 drwxr-xr-x. 21 system_u:object_r:var_t:s0       root    root    4096 Dec  7 14:28 ..
 ```
 
+### 1.3 Windows
+
+> 参考： [安装Jenkins](https://jenkins.io/zh/doc/book/installing/)
+
+#### 1.3.1 Windows安装Jenkins平台服务
+
+从网站安装的话, 请使用安装程序：
+
+- [Download the latest package](http://mirrors.jenkins.io/windows/latest)
+- 打开包装并按照说明操作
+
+#### 1.3.2 详细安装步骤说明
+
+1. 下载 `jenkins-2.176.zip` 安装包，解压得到 `jenkins.exe`，双击按照如下步骤安装
+
+![](image/install-jenkins-windows-1.png)
+
+![](image/install-jenkins-windows-2.png)
+
+![](image/install-jenkins-windows-3.png)
+
+![](image/install-jenkins-windows-4.png)
+
+![](image/install-jenkins-windows-5.png)
+
+2. 安装完成后自动打开浏览器访问 `http://localhost:8080/login?from=%2F`
+![](image/install-jenkins-windows-6.png)
+
+3. 将 `D:\Develop\Jenkins\secrets\initialAdminPassword` 文件中内容输入到上图后，点击 `Continue` 按钮
+4. 初始化插件安装方式，可选择 `Install suggested plugins` 和 `Select plugins to install` 两种模式，根据需求自行选择（本文基于 `Install suggested plugins` 演示）
+![](image/install-jenkins-windows-7.png)
+
+5. 进入默认推荐插件安装界面
+![](image/install-jenkins-windows-8.png)
+
+6. 安装完成，进入创建管理员用户界面，可选择 `Continue as admin` 和 `Save and Continue`（本文基于 `Save and Continue` 演示）
+![](image/install-jenkins-windows-9.png)
+![](image/install-jenkins-windows-10.png)
+
+7. 配置服务器域名地址（本文基于默认配置 `http://localhost:8080/` 演示）
+![](image/install-jenkins-windows-11.png)
+
+8. 安装完成，点击 `Start using Jenkins`，进入Jenkins平台服务页面
+![](image/install-jenkins-windows-12.png)
+
+9. Jenkins平台服务初始页面
+![](image/install-jenkins-windows-13.png)
+
 ## 2 Jenkins Cli
 
 进入`系统设置 - 安全设置`开启命令行
@@ -172,14 +256,18 @@ java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -remoting -s http://loca
 
 #### 3.2.1 用户认证鉴权
 
-1.ldap
+##### 3.2.1.1 ldap
 
 ```
 官网地址: https://plugins.jenkins.io/ldap
 功能: 连接LDAP，使用LDAP进行用户认证
 ```
 
-2.role-strategy
+**插件配置**
+
+进入系统设置
+
+##### 3.2.1.2 role-strategy
 
 ```
 官网地址: https://plugins.jenkins.io/role-strategy
@@ -506,8 +594,9 @@ BusyBox v1.2.8.4 (2018-07-17 15:21:40 UTC)
 ## 5 更新记录
 
 ```
-2019.02.13: 完成初稿，包含Jenkins服务器安装概述、主流插件概述、Jenkins API等内容。
+2019.02.13: 完成初稿，包含Jenkins服务器安装概述、主流插件概述、Jenkins API等内容
 2019.02.17: 完善API接口调用内容
 2019.03.14: 完善实际使用中可能存在的问题记录
+2019.05.09: 增加windows平台安装Jenkins服务的详细说明
 ```
 
