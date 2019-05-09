@@ -36,10 +36,6 @@
 
 <!-- /TOC -->
 
-> 本文内容Jenkins服务器基于 jenkinsci/blueocean 镜像搭建。
->
-> Jenkins版本: 2.150.1
-
 ## 1 Installing Jenkins
 
 * [Jenkins服务器安装 官方文档](https://jenkins.io/doc/book/installing/)
@@ -50,6 +46,12 @@
 
 ### 1.2 Docker
 
+> 本文内容Jenkins服务器基于 jenkinsci/blueocean 镜像搭建。
+>
+> Jenkins版本: 2.150.1
+>
+> 
+>
 > 步骤：
 >
 > ​	安装Docker
@@ -265,7 +267,13 @@ java -jar /var/jenkins_home/war/WEB-INF/jenkins-cli.jar -remoting -s http://loca
 
 **插件配置**
 
-进入系统设置
+进入 `系统设置（Manage Jenkins） -  安全管理（Configure Global Security）`
+
+选择 `LDAP`![jenkins-ldap-1](image/jenkins-ldap-1.png)
+
+配置，如下
+
+
 
 ##### 3.2.1.2 role-strategy
 
