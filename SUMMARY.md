@@ -49,7 +49,7 @@
             * [基于 Docker 镜像搭建 GitLab 平台](Section2/VersionControl/install-gitlab-by-docker.md)
     * [持续集成相关](Section2/CongratulationIntegration/README.md)
         * [Jenkins](Section2/CongratulationIntegration/Jenkins/README.md)
-            * [Jenkins 命令行](Section2/CongratulationIntegration/Jenkins/jenkins-cli.md)
+            * [Jenkins 最佳实践](Section2/CongratulationIntegration/Jenkins/jenkins-best-practices.md)
             * [Python 使用Jenkins Rest API 之 python-jenkins](Section2/CongratulationIntegration/Jenkins/python-jenkins.md)
             * [Python 使用Jenkins Rest API 之 jenkinsapi](Section2/CongratulationIntegration/Jenkins/jenkinsapi.md)
             * [Jenkins 获取字符串变量](Section2/CongratulationIntegration/Jenkins/jenkins-variable.md)
