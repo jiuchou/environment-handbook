@@ -47,3 +47,9 @@ sed -i '/naughty_position/r filename' file
 sed -i '2r filename' file
 ```
 
+删除指定行到指定字符串之间的内容
+
+```bash
+sed -i "$((line - 1)), /<\/hudson.model.StringParameterDefinition>/d" ${configFilename}
+```
+

@@ -27,6 +27,64 @@ https://blog.csdn.net/u012326462/article/details/81038446
 
 
 
+系统监控工具介绍
+
+https://www.cnblogs.com/mengdeep/p/5296991.html
+
+Shell 脚本实现 Linux 系统监控(基于monitor)
+
+https://blog.csdn.net/dahunihao/article/details/77844906
+
+Linux学习进阶路线图
+
+http://www.nowamagic.net/librarys/veda/detail/2054
+
+https://blog.csdn.net/zdwzzu2006/article/details/4334791
+
+http://www.ttlsa.com/linux/linux-system-worth-studying-and-road-map/
+
+ubuntu 介绍
+
+https://www.jianshu.com/p/0ae245cfe1cf?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+
+
+
+shell获取字符串长度
+
+https://www.cnblogs.com/kingle-study/p/9550776.html
+
+a="string"
+
+expr length $a
+
+
+
+**uniq**
+
+```bash
+# 消除重复行
+sort unsort.txt | uniq
+# 统计各行在文件中出现的次数
+sort unsort.txt | uniq -c
+# 找出重复行
+sort unsort.txt | uniq -d
+
+# 可指定每行中需要比较的重复内容：
+# -s	开始位置
+# -w	比较字符数
+```
+
+
+
+
+
+Linux 性能
+
+* https://blog.51cto.com/winters/1770642
+* https://blog.csdn.net/hellojoy/article/details/80760010
+
+
+
 ![img](image/linux.png)
 
 

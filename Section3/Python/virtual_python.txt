@@ -1,0 +1,45 @@
+安装虚拟环境
+
+
+1. 安装python-pip
+apt-get install python-pip
+
+2. 升级python包管理工具pip
+pip install --upgrade pip
+
+3. python虚拟环境安装
+apt-get install python-virtualenv
+virtualenv --no-site-packages myblog
+cd myblog
+source ./bin/activate
+{退出虚拟环境：deactivate}
+
+4. 安装django
+pip install django
+验证：python -m django --version
+
+pip install mysql-python
+验证：python; import MySQLdb
+
+
+[root@yang ~]# git config --global user.name Gtry
+[root@yang ~]# git config --global user.name kaige.yang@outlook.com
+[root@yang ~]# git config --global push.default simple
+[root@yang ~]# git config --global credential.helper cache
+
+
+1. 安装django
+
+2. 安装数据库
+
+3. 安装web.py
+下载
+http://webpy.org/static/web.py-0.37.tar.gz
+将解压的文件夹放在应用程序目录下（此项目可用）
+python setup.py install（所有应用程序可用）
+
+寒 星 溪 月 疏 星 首，花 残 二 月 并 白 莲。
+雨 月 金 星 追 黑 玉，松 丘 新 宵 瑞 山 腥。
+星 月 长 峡 恒 水 流，白 莲 垂 俏 云 浦 岚。
+黑 玉 银 月 倚 明 星，斜 月 明 月 堪 称 朋。
+二 十 六 局 先 弃 二，直 指 游 星 斜 彗 星。

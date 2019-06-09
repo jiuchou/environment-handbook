@@ -164,7 +164,7 @@ Post-build Actions -> Delete workspace when build is done
 #### 2.1.5 使用 Linux curl 调用 Rest API 清理
 
 ```bash
-curl -u "username:password" JENKINS_URL/job/JOB_NAME/doWripOutWorkspace
+curl -u "username:password" JENKINS_URL/job/JOB_NAME/doWripOutWorkspace > /dev/null 2>&1
 ```
 
 #### 2.1.6 使用 Groovy 脚本清理

@@ -140,3 +140,5 @@ PostgreSQL问题解决--连接失败
 https://blog.csdn.net/u012948976/article/details/51763565
 
 
+
+* sql： http://www.w3school.com.cn/sql/sql_update.asp

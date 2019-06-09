@@ -370,6 +370,11 @@ pylint是VScode中python自带的插件，可以帮助代码规范，美观。
 
 #### 3.3.1 Python
 
+> * 告警提示
+>   * https://blog.csdn.net/xd_wjc/article/details/83023743
+>   * https://blog.csdn.net/a15376/article/details/81298079
+>   * VSCode pylint： https://stackoverflow.com/questions/28437071/pylint-1-4-reports-e1101no-member-on-all-c-extensions
+
 1. 安装 VSCode Python 插件
 2. 配置setting.json
 

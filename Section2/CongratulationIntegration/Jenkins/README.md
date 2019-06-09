@@ -977,13 +977,52 @@ BusyBox v1.2.8.4 (2018-07-17 15:21:40 UTC)
 
 - https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients
 
-## 5 可借鉴整理
+## 5 信息获取
+
+### 5.1 Jenkins 获取操作者的信息
+
+#### 5.1.1 远程获取
+
+```bash
+# 使用 xml 格式
+curl -o api.xml -X POST "$JENKINS_URL/job/$JOB_NAME/$BUILD_NUMBER/api/xml"
+operatingUser=$(cat api.xml | grep 'userId' | awk -F '>' '{print $2}' | awk -F '<' '{print $1}')
+buildUrl=$(cat api.xml | grep '<url>' | awk -F '>' '{print $2}' | awk -F '<' '{print $1}')
+# 获取构建状态
+build_status=`grep 'result' temp.xml`
+build_status=${build_status##*<result>}
+build_status=${build_status%%</result>*}
+
+# 使用 json 格式
+curl -o api.json -X POST "$JENKINS_URL/job/$JOB_NAME/$BUILD_NUMBER/api/json"
+operatingUser=$(cat api.json | jq .actions[0].causes[0].userId)
+buildUrl=$(cat api.json | jq .url)
+```
+
+#### 5.1.2 本工程内获取
+
+```bash
+JOB_NAME
+BUILD_URL
+```
+
+
+
+## 6 可借鉴整理
 
 * [使用 Jenkins 执行持续集成的几个实用经验分享](https://blog.csdn.net/aixiaoyang168/article/details/80636544)
+
 * Jenkins-cli 自动化构建工具（1）https://www.jianshu.com/p/45f010d63ff3
+
 * [Jenkins实现前端项目自动化集成打包部署](https://segmentfault.com/a/1190000011121770)
 
-## 6 更新记录
+* Why use Conditional step (single)?： https://wiki.jenkins.io/pages/viewpage.action?pageId=59507542
+
+* Converting Conditional Build Steps to Jenkins Pipeline： https://jenkins.io/blog/2017/01/19/converting-conditional-to-pipeline/
+
+  
+
+## 7 更新记录
 
 ```
 2019.02.13: 完成初稿，包含Jenkins服务器安装概述、主流插件概述、Jenkins API等内容
@@ -991,5 +1030,6 @@ BusyBox v1.2.8.4 (2018-07-17 15:21:40 UTC)
 2019.03.14: 完善实际使用中可能存在的问题记录
 2019.05.09: 增加windows平台安装Jenkins服务的详细说明
 2019.05.12: 完善Jenkins插件内容
+2019.06.09: 增加信息获取内容
 ```
 

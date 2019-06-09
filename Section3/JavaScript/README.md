@@ -43,6 +43,8 @@
 
 #### 1.2 favicon.ico图标不显示
 
+* https://blog.csdn.net/huihui940630/article/details/80318889
+
 ##### 1.2.1 部署问题
 
 **背景**
@@ -89,3 +91,62 @@
 >
 > ​	图标文件 `favicon.ico` 路径出错，找到 `favicon.ico` 绝对路径如能正常显示，则为引入图标时路径出错
 
+## 待整理
+
+### webpack
+
+* Webpack 4 和单页应用入门
+  * https://github.com/wallstreetcn/webpack-and-spa-guide
+* [官方文档](https://webpack.js.org/concepts)
+
+
+
+待制作思维导图
+错误处理机制 https://wangdoc.com/javascript/features/error.html
+Error对象
+  Error的6个派生对象
+    SyntaxError 
+    ReferenceError 
+    RangeError 
+    TypeError 
+    URIError 
+    EvalError （该错误类型已经不再使用了，只是为了保证与以前代码兼容，才继续保留）
+  自定义错误对象
+
+switch...case 结构
+https://wangdoc.com/javascript/features/style.html
+
+
+帮你彻底搞懂JS中的prototype、__proto__与constructor（图解）
+https://blog.csdn.net/cc18868876837/article/details/81211729
+
+
+
+
+
+扩展
+AJAX，即Asynchronous Javascript And XML，介绍https://baike.baidu.com/item/ajax/8425?fr=aladdin
+
+JavaScript中文网
+https://www.javascriptcn.com/read-62382.html
+
+vue.js文档
+https://cn.vuejs.org/v2/guide/syntax.html
+
+http://wiki.commonjs.org/wiki/CommonJS
+grunt
+https://gruntjs.com/who-uses-grunt
+
+development stack
+正则表达式
+教程
+常用
+语言使用方式
+  shell
+  java
+  JavaScript
+  数据库
+  Python
+  Jenkins
+    Jenkins权限视图Pattern只想包含某字段开头且不包含另外字段的内容(Project_ProjectName_X)
+      Project_((?!ProjectName_1|ProjectName_2|ProjectName_3).)*

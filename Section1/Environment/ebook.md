@@ -1,6 +1,12 @@
 # ebook
 
+* 计算机基础
+
+  * 【[计算机科学速成课](https://www.bilibili.com/video/av21376839)】[40集全/精校] - Crash Course Computer Science
+  * [Learn X in Y minutes](https://learnxinyminutes.com/)
+
 * Linux
+
   * 教程
     * [Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 
@@ -34,6 +40,9 @@
     * [廖雪峰的官方网站 Python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
   * 博客
     * [如何用 ReadtheDocs、Sphinx 快速搭建写书环境](https://www.jianshu.com/p/78e9e1b8553a)
+    * [Markdown 书写风格指南](http://einverne.github.io/markdown-style-guide/zh.html)
+    * GitBook 链接示例：http://zitiao.org/material-design/usability/accessibility.html
+    * MDwiki 链接示例：http://dynalon.github.io/mdwiki/#!layout.md 
   * 工具
     * [文档格式转换工具之pandoc](http://pandoc.org/try/)
 

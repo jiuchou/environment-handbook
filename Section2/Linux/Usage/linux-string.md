@@ -15,6 +15,7 @@
         - [3.2 获取字符串指定位置的内容](#32-获取字符串指定位置的内容)
         - [3.3 字符串切割及效率比较](#33-字符串切割及效率比较)
         - [3.4 剔除字符串中带有 `_SUFFIX`(不区分大小写) 后缀的单词，同时删除重复的逗号及前后的逗号](#34-剔除字符串中带有-_suffix不区分大小写-后缀的单词同时删除重复的逗号及前后的逗号)
+        - [3.5 去除重复的逗号](#35-去除重复的逗号)
     - [更新说明](#更新说明)
 
 <!-- /TOC -->
@@ -220,7 +221,36 @@ string=",position1,position2_SUFFIX,position3_suffix_zzz,,position_n,,position3_
 echo $string | sed "s/^/,/g" | sed "s/[^,]*_suffix,/,/gi" | sed "s/[^,]*_suffix$//gi" | sed "s/[,][,]*/,/g" | sed "s/^,*//g" | sed "s/,$//g" | sed "s/[[:blank:]]//g"
 ```
 
+### 3.5 去除重复的逗号
 
+```bash
+echo $string | sed "s/^/,/g" | sed "s/,[^,]*_[Mm][Aa][Cc],//g" | sed "s/[,][,]*/,/g" | sed "s/^,*//g" | sed "s/,$//g" | sed "s/[[:blank:]]//g"
+```
+
+### 3.6 转换字符串为数组
+
+> string="a,dsa,sd"
+
+**IFS**
+
+```bash
+OLD_IFS="$IFS"
+IFS=","
+arr=($string)
+IFS="$OLD_IFS"
+```
+
+**sed**
+
+```bash
+echo $string | sed "s/,/ /g"
+```
+
+**cut**
+
+```bash
+echo $string | cut -d , -f 1
+```
 
 ## 更新说明
 

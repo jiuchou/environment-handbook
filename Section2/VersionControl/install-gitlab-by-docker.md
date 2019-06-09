@@ -202,8 +202,13 @@ and the repository exists.
 chown -R 998:998 ssh_host_rsa_key.*
 ```
 
+## 4 待整理
 
-## 4 更新记录
+* svnlab install error
+  * https://blog.csdn.net/huangbo10/article/details/39154493
+  * http://www.bubuko.com/infodetail-2605904.html
+
+## 5 更新记录
 
 ```
 2019.03.18: 初步整理，增加基于 Docker 镜像搭建 GitLab 服务器文档，同时增加 LDAP 配置
