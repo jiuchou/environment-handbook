@@ -32,3 +32,22 @@ Mysql修改表字段类型
 * https://www.cnblogs.com/mr-wuxiansheng/p/6891940.html
 * https://blog.51cto.com/xiaocao13140/2124941?utm_source=oschina-app
 
+
+重排auto_increment（清空表数据后让自增ID仍从1开始）
+
+方法1
+
+```bash
+truncate table_name;
+```
+优点：
+1）速度快
+2）可以对自增ID进行重排，使自增ID仍从1开始计算
+
+方法2
+
+清空表数据后，使用alter修改表
+
+```bash
+alter table table_name auto_increment=1;
+```
