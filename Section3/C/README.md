@@ -16,5 +16,9 @@ https://blog.csdn.net/lyh66/article/details/50098739
   * https://www.cnblogs.com/simonid/p/6374306.html
 
 
-
 * https://www.jianshu.com/p/245540099da4
+
+
+warning: incompatible implicit declaration of built-in function ‘memset’ [enabled by default]
+
+未包含对应的头文件
