@@ -38,3 +38,34 @@
 
 * [How to get classpath in Groovy?](https://stackoverflow.com/questions/5212442/how-to-get-classpath-in-groovy)
 
+## Jenkins Plugin
+
+
+* https://plugins.jenkins.io/monitoring
+* 界面登录： https://plugins.jenkins.io/autoaction-step
+* 触发人信息： https://plugins.jenkins.io/buildtriggerbadge
+
+
+
+* 多工程配置 https://plugins.jenkins.io/jenkins-multijob-plugin
+  * Jenkins Multijob plugin version 1.32
+    * maven-plugin v2.6 is missing. To fix, install v2.6 or later.
+      * https://updates.jenkins.io/2.121/latest/maven-plugin.hpi
+        * https://plugins.jenkins.io/javadoc
+    * conditional-buildstep v1.3.3 is missing. To fix, install v1.3.3 or later.
+      * https://plugins.jenkins.io/conditional-buildstep
+        * https://plugins.jenkins.io/run-condition
+    * envinject v1.90 is missing. To fix, install v1.90 or later.
+      * https://plugins.jenkins.io/envinject
+        * https://plugins.jenkins.io/envinject-api
+    * built-on-column v1.1 is missing. To fix, install v1.1 or later.
+      * https://plugins.jenkins.io/built-on-column
+    * parameterized-trigger v2.25 is missing. To fix, install v2.25 or later.
+      * https://plugins.jenkins.io/parameterized-trigger
+
+
+jenkins模板插件
+
+```bash
+<hudson.plugins.templateproject.ProxyBuilder plugin="template-project@1.5.2">
+```

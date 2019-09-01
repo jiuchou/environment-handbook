@@ -1,7 +1,105 @@
 # JavaScript
 
+* UpdateTime: 2019.08.16
 
-## 第一部分 样式
+## 第一部分 nodejs的安装及配置
+
+下载地址：https://nodejs.org/zh-cn/download/
+
+### 0 Linux
+
+#### 0.1 源码编译安装
+
+**下载**
+
+```bash
+wget https://nodejs.org/dist/v10.16.2/node-v10.16.2.tar.gz
+```
+
+#### 0.2 二进制安装
+
+```bash
+wget https://nodejs.org/dist/v10.16.3/node-v10.16.3-linux-x64.tar.xz
+tar xf node-v10.16.3-linux-x64.tar.xz
+cd /usr/local/bin
+ln -s /usr/local/src/node-v10.16.3-linux-x64/bin/npm
+ln -s /usr/local/src/node-v10.16.3-linux-x64/bin/node
+```
+
+#### 0.3 通过nvm安装（推荐）
+
+详细安装参考官方安装指南：https://github.com/nvm-sh/nvm#installation
+
+1. 安装nvm
+
+   ```bash
+   # 推荐
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   # 或者
+   # wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+   # 启用
+   source ~/.bashrc
+   ```
+
+2. 使用
+
+   由于nvm自带的nodejs版本是最新开发版本，即当前的v12.8.1版本。
+
+   由于日常使用稳定版本进行开发，所以想要使用期望的nodejs版本需要进行安装。当前最新稳定版本为v10.16.2，本文档使用此版本记录。
+
+   ```bash
+   # 安装nodejs版本
+   nvm install v10.16.2
+   # 切换版本
+   nvm use v10.16.2
+   # v10.16.2
+   node -v
+   # 6.9.0
+   npm -v
+   ```
+
+   默认情况下，The script clones the nvm repository to `~/.nvm` and adds the source line to your profile (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).
+
+   由于使用Ubuntu18.04的gnome桌面打开终端是一种非登录式shell（配置文件执行顺序：~/.bashrc--> /etc/bashrc--> /etc/profile.d/*.sh）。每次打开终端时，nodejs版本会使用默认的v12.8.1版本。
+
+   修改~/.bashrc文件，增加切换nodejs版本内容：
+
+   ```bash
+   export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+   # 增加此行
+   nvm use v10.16.2
+   ```
+
+#### 0.4 配置npm
+
+* 指定全局安装路径和缓存路径
+
+  > 使用nvm安装方式时，不设置，默认安装路径为 `/home/jiuchou/.nvm/versions/node/v10.16.2/lib/node_modules`
+
+  ```bash
+  # 设置全局模块的安装路径到 `node_global` 文件夹 
+  npm config set prefix /home/jiuchou/EnvironmentRely/nodejs/node_global
+  # 设置缓存到 `node_cache` 文件夹
+  npm config set cache /home/jiuchou/EnvironmentRely/nodejs/node_cache
+  # 验证是否配置成功
+  npm config get cache
+  npm ls -g
+  ```
+
+* 使用淘宝镜像站`(建议跳过此步骤，不建议使用)`
+
+* 安装 cnpm（根据个人需求）
+
+  ```bash
+  npm install cnpm -g --registry=https://registry.npm.taobao.org
+  ```
+
+### 1 Windows
+
+
+## 第二部分 样式
 
 ### 0 扉页
 
@@ -90,6 +188,12 @@
 > **原因**
 >
 > ​	图标文件 `favicon.ico` 路径出错，找到 `favicon.ico` 绝对路径如能正常显示，则为引入图标时路径出错
+
+### 2 鼠标放在文字上显示文字
+
+```javascript
+<a href="#" title="这里是显示的文字">hello</a>
+```
 
 ## 待整理
 

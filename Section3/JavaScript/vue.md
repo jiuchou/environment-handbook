@@ -2,17 +2,29 @@
 
 * 官方教程： https://cn.vuejs.org/v2/guide/
 
-
-
-### vue-cli
+## vue-cli 3.x
 
 [vue-cli3.0官方指南](https://cli.vuejs.org/guide/)
 
 * vue-cli2 介绍： https://blog.csdn.net/xiaoyangerbani/article/details/80735310
 
-### Axios
+### Install
 
-#### 扩展
+```bash
+npm install -g @vue/cli
+```
+
+**网络慢**
+
+```bash
+npm config set registry https://registry.npm.taobao.org --global
+```
+
+
+
+## Axios
+
+### 扩展
 
 > * 内容来自: https://blog.csdn.net/u012369271/article/details/72848102
 
@@ -23,11 +35,11 @@ import axios from 'axios';
 Vue.prototype.$axios=axios;
 ```
 
-### Vuex
+## Vuex
 
 [官方指南](https://vuex.vuejs.org/)
 
-#### 扩展
+### 扩展
 
 * [解决Vuex持久化插件-在F5刷新页面后数据不见的问题](https://www.cnblogs.com/lemoncool/p/9645587.html)
 * Vue+Element实现表格的编辑、删除、以及新增行的最优方法： https://blog.csdn.net/wangjie919/article/details/82050411
@@ -38,9 +50,9 @@ Vue.prototype.$axios=axios;
 
 
 
-### UI
+## UI
 
-#### ElementUI
+### ElementUI
 
 * 关于Vue ElementUI表格后台排序详解
   * https://blog.csdn.net/fture_bird/article/details/80916227

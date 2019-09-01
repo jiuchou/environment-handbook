@@ -648,6 +648,14 @@ Jenkins内置功能，类似Build periodically，可以设置类似crontab时间
 
 这个插件将Jenkins集成到Jira WebHooks中，支持在Jira issue的状态等变化时触发Jenkins构建。
 
+##### 3.2.5.3 构建
+
+###### 3.2.5.3.1 Python
+
+- 插件地址: https://plugins.jenkins.io/python
+
+这个插件将Python环境集成到Jenkins中，在构建步骤中选择 `Execute Python script` 可以调用python脚本。
+
 #### 3.2.6 易用性工具插件
 
 1.ansicolor

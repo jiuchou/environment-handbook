@@ -25,3 +25,8 @@ https://blog.csdn.net/sdcxyz/article/details/53184323
 
 
 
+
+
+# 配置vscode终端字体
+
+https://blog.csdn.net/chenghai37/article/details/81417293
