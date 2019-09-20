@@ -141,6 +141,36 @@ sudo apt-get install typora
 
 editor.fontFamily 设置
 
+安装字体
+
+```bash
+# 下载字体
+cd /usr/share/fonts/truetype/
+git clone https://github.com/abertsch/Menlo-for-Powerline.git
+# 刷新字体
+fc-cache -f -v
+```
+
+修改 `setting.json` 配置
+
+```json
+	// 增加字体配置
+    "editor.fontFamily": "Menlo for Powerline",
+```
+
+常用配置
+
+```json
+{
+    "terminal.integrated.fontFamily": "Menlo for Powerline",
+    "editor.fontFamily": "Menlo for Powerline",
+    "editor.fontSize": 16,
+    "editor.renderWhitespace": "all",
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 1,
+}
+```
+
 ### 3.3 百度云
 
 - https://www.jianshu.com/p/00b95ba24010
