@@ -1,0 +1,58 @@
+# ubuntu16.04
+
+磁盘
+交换空间
+https://www.cnblogs.com/sunshine-long/p/11045030.html
+
+# 创建要作为swap分区的文件
+dd if=/dev/zero of=/home/swapfile bs=1M count=32768
+chmod 600 swapfile
+# 格式化为交换分区文件，建立swap的文件系统
+mkswap swapfile 
+# 启用swap文件
+swapon swapfile
+# 启用swap文件（永久启用）
+vim /etc/fstab
+/home/swapfile  swap    swap    defaults        0       0
+
+# 查看结果
+free -h
+
+# 查看当前swappiness值
+cat /proc/sys/vm/swappiness
+# 修改swappiness值为60（临时修改，重启后即还原为默认值）
+sysctl vm.swappiness=60
+# 永久修改
+vim /etc/sysctl.conf 
+vm.swappiness = 60
+
+
+
+查看版本信息
+root@HQ-V-YFBY:/home# lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04 LTS
+Release:	16.04
+Codename:	xenial
+root@HQ-V-YFBY:/home# cat /etc/os-release 
+NAME="Ubuntu"
+VERSION="16.04 LTS (Xenial Xerus)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 16.04 LTS"
+VERSION_ID="16.04"
+HOME_URL="http://www.ubuntu.com/"
+SUPPORT_URL="http://help.ubuntu.com/"
+BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/"
+UBUNTU_CODENAME=xenial
+root@HQ-V-YFBY:/home# uname -a 
+Linux HQ-V-YFBY 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+# https://www.cnblogs.com/kelamoyujuzhen/p/9691113.html
+# centos
+yum install redhat-lsb -y
+# ubuntu
+
+cat /etc/issue
+部分linux中不存在
