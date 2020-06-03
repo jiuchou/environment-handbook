@@ -2,6 +2,9 @@
 
 * [linux命令总结sed命令详解](https://www.cnblogs.com/ginvip/p/6376049.html)
 
+https://www.cnblogs.com/wangqiguo/p/6718512.html
+
+
 1.删除
 
 ```bash
@@ -17,6 +20,9 @@ sed -n "$(expr ${line} + 1),/\$p/p" fileName
 # 删除指定行之间的内容
 line=5
 sed -i "1, ${line} d" fileName
+
+# 删除一段内容
+sed -i "/begin/,/finish/d" filename
 ```
 
 2.修改
@@ -31,7 +37,9 @@ sed -i "1, ${line} d" fileName
     * 添加字符串到行首 `sed -i "s#^.*test#${string}&#g" filename`
     * 添加字符串到行尾 `sed -i "s#^.*test.*#&${string}#g" filename`
 
+3.修改包含string的行
 
+`sed -i '/string/c change_content' filename`
 
 
 

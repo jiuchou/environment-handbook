@@ -26,6 +26,13 @@ except ImportError:
     _LZMA_SUPPORTED = False
 
 try:
+    import rarfile
+    del rarfile
+    _RARFILE_SUPPORTED = True
+except ImportError:
+    _RARFILE_SUPPORTED = False
+
+try:
     import pylzma
     del pylzma
     _PYLZMA_SUPPORTED = True
@@ -97,6 +104,22 @@ def _unpack_zipfile(filename, extract_dir):
         zip.close()
 
 
+def _unpack_rarfile(filename, extract_dir):
+    """Unpack rar `filename` to `extract_dir`
+    """
+    import rarfile  # late import for breaking circular dependency
+
+    if not rarfile.is_rarfile(filename):
+        raise ReadError("%s is not a rar file" % filename)
+
+    rar = rarfile.RarFile(filename)
+    try:
+        for name in rar.namelist():
+            rar.extract(name, extract_dir)
+    finally:
+        rar.close()
+
+
 def _unpack_7zfile(filename, extract_dir):
     import py7zlib
     fp = open(filename, 'rb')
@@ -126,20 +149,23 @@ def _unpack_7zfile(filename, extract_dir):
 
 _UNPACK_FORMATS = {
     'tar': (['.tar'], _unpack_tarfile, [], "uncompressed tar file"),
-    'zip': (['.zip'], _unpack_zipfile, [], "ZIP file"),
 }
 
 if _ZLIB_SUPPORTED:
-    _UNPACK_FORMATS['gztar'] = (['.tar.gz', '.tgz'], _unpack_tarfile, [],
-                                "gzip'ed tar-file")
+    _UNPACK_FORMATS['gztar'] = (['.tar.gz', '.tgz'], _unpack_tarfile,
+                                [('compress', 'gzip')], "gzip'ed tar-file")
+    _UNPACK_FORMATS['zip'] = (['.zip'], _unpack_zipfile, [], "ZIP file")
 
 if _BZ2_SUPPORTED:
-    _UNPACK_FORMATS['bztar'] = (['.tar.bz2', '.tbz2'], _unpack_tarfile, [],
-                                "bzip2'ed tar-file")
+    _UNPACK_FORMATS['bztar'] = (['.tar.bz2', '.tbz2'], _unpack_tarfile,
+                                [('compress', 'bzip2')], "bzip2'ed tar-file")
 
 if _LZMA_SUPPORTED:
-    _UNPACK_FORMATS['xztar'] = (['.tar.xz', '.txz'], _unpack_tarfile, [],
-                                "xz'ed tar-file")
+    _UNPACK_FORMATS['xztar'] = (['.tar.xz', '.txz'], _unpack_tarfile,
+                                [('compress', 'xz')], "xz'ed tar-file")
+
+if _RARFILE_SUPPORTED:
+    _UNPACK_FORMATS['rar'] = (['.rar'], _unpack_rarfile, [], "RAR file")
 
 if _PYLZMA_SUPPORTED:
     _UNPACK_FORMATS['7z'] = (['.7z'], _unpack_7zfile, [], "7z-zip file")

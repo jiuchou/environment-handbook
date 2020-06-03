@@ -19,6 +19,15 @@ cat filename | grep -v "^[AX][BY]"
 ```
 
 
+获取 svn 版本号（兼容svn1.6/svn1.9）
+
+```bash
+# SVN 版本信息使用提交的 commit 信息
+SVN_REVISION=$(svn log -l 1 ${URL} | awk "NR==2" | awk '\''{print $1}'\'' | sed "s/r//g")
+```
+
+* timewait: http://www.httpclient.cn/archives/98.html
+
 
 # 基础知识
 
